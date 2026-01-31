@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Global Economy at an Inflection Point
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/globalfinancialinflection.png
 tldr: >
   The global economy in 2025 is not collapsing, but it is decisively
   re-wiring itself. Slowing growth, extreme trade policy uncertainty,
