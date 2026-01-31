@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Looming Short-Circuit - Navigating the Geopolitics and Data of the Mineral-Intensive Energy Transition
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/loomingshortcircuit.png
 tldr: >
   The global energy transition is colliding with a structural shortage of
   critical minerals like copper, lithium, and rare earths. Long mining
