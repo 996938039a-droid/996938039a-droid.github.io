@@ -8,8 +8,6 @@ tldr: >
   creating a new economic regime—limbic capitalism—that profits from fear,
   desire, and compulsive attention.
 ---
-
-
 ### Introduction: A Brain Built for Savannas, Trapped in Feeds
 
 The contemporary era is defined by a systemic mismatch between the ancestral
