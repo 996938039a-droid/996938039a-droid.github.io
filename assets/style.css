@@ -226,37 +226,63 @@ img {
 }
 
 /* ===== ARTICLE PAGE ===== */
+/* ===============================
+   ARTICLE PAGE
+================================ */
+
 .article {
   max-width: 760px;
   margin: auto;
-  padding: 100px 24px;
+  padding: 100px 24px 140px;
 }
 
-.article img.hero-image {
-  height: 420px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 28px;
-  margin-bottom: 48px;
-}
-
-.article h1 {
-  font-size: 3rem;
-  margin-bottom: 24px;
-}
-
+/* TL;DR block */
 .tldr {
-  background: rgba(255,255,255,0.05);
   border-left: 4px solid var(--accent);
   padding: 20px 24px;
-  margin-bottom: 48px;
+  margin-bottom: 60px;
+  background: rgba(255,255,255,0.03);
+}
+
+.tldr strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.tldr p {
   color: var(--muted);
   font-size: 1rem;
 }
 
-.article p {
-  margin-bottom: 24px;
+/* Article body */
+.article-body p {
   font-size: 1.05rem;
+  margin-bottom: 26px;
+  color: #eaeaf0;
+}
+
+.article-body h2 {
+  font-size: 1.8rem;
+  margin: 60px 0 20px;
+}
+
+.article-body h3 {
+  font-size: 1.4rem;
+  margin: 40px 0 16px;
+}
+
+.article-body ul {
+  margin: 20px 0 28px 20px;
+}
+
+.article-body li {
+  margin-bottom: 12px;
+}
+
+/* Footer */
+.article-footer {
+  margin-top: 80px;
 }
 
 /* ===============================
