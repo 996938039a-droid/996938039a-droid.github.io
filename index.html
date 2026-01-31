@@ -1,11 +1,40 @@
+---
+layout: null
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Signals and Patterns</title>
+  <title>Signals & Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <h1>Signals and Patterns</h1>
-  <p>The site is live.</p>
+
+<header class="hero">
+  <h1>Signals & Patterns</h1>
+  <p>Data-driven analysis of global phenomena</p>
+</header>
+
+<section class="slider-container">
+  <div class="slider" id="blogSlider">
+
+    {% for post in site.posts %}
+      <div class="slide">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description }}</p>
+        <a href="{{ post.url }}">Read →</a>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
+
+<div class="cta">
+  <a href="/blogs.html">View all blogs</a>
+</div>
+
+<script src="/assets/slider.js"></script>
 </body>
 </html>
