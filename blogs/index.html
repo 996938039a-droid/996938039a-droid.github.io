@@ -6,32 +6,76 @@ layout: null
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>All Articles</title>
+  <title>All Articles | Signals & Patterns</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 
 <body>
-  <div class="container">
 
-    <section class="hero">
+  <!-- HERO (SAME STRUCTURE AS HOME) -->
+  <section class="hero-banner">
+    <img
+      src="/assets/hero.png"
+      alt="Patterns, systems and signals"
+      class="hero-bg"
+    />
+
+    <div class="hero-overlay">
       <h1>All Articles</h1>
-      <p>Long-form essays exploring patterns behind modern phenomena.</p>
-    </section>
+      <p>
+        This is a complete archive of long-form essays published on
+        Signals & Patterns.
+        <br /><br />
+        Each piece explores data-backed signals, structural patterns,
+        and second-order effects across economics, technology,
+        psychology, systems, and collective behavior.
+        <br /><br />
+        Use the search below to quickly surface ideas that matter to you.
+      </p>
+    </div>
+  </section>
 
-    <section class="blog-grid">
-      {% for post in site.posts %}
-        <div class="blog-card">
-          <img src="{{ post.banner }}">
-          <div class="blog-card-content">
-            <h3>{{ post.title }}</h3>
-            <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            <a href="{{ post.url }}">Read →</a>
-          </div>
+  <!-- SEARCH -->
+  <section class="articles-search">
+    <input
+      type="text"
+      id="articleSearch"
+      placeholder="Search articles by title or idea…"
+      onkeyup="filterArticles()"
+    />
+  </section>
+
+  <!-- ARTICLES LIST -->
+  <section class="articles-list" id="articlesList">
+
+    {% for post in site.posts %}
+      <article class="article-bar">
+        <img src="{{ post.banner }}" alt="{{ post.title }}">
+
+        <div class="article-bar-content">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <a href="{{ post.url }}" class="read-link">Read more</a>
         </div>
-      {% endfor %}
-    </section>
+      </article>
+    {% endfor %}
 
-  </div>
+  </section>
+
+  <!-- SIMPLE SEARCH SCRIPT -->
+  <script>
+    function filterArticles() {
+      const input = document.getElementById("articleSearch");
+      const filter = input.value.toLowerCase();
+      const articles = document.querySelectorAll(".article-bar");
+
+      articles.forEach(article => {
+        const text = article.innerText.toLowerCase();
+        article.style.display = text.includes(filter) ? "flex" : "none";
+      });
+    }
+  </script>
+
 </body>
 </html>
