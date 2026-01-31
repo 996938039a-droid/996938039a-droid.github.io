@@ -258,3 +258,97 @@ img {
   margin-bottom: 24px;
   font-size: 1.05rem;
 }
+
+/* ===============================
+   ALL ARTICLES PAGE
+================================ */
+
+/* Search bar */
+.articles-search {
+  padding: 60px 24px 40px;
+  text-align: center;
+}
+
+.articles-search input {
+  width: 100%;
+  max-width: 520px;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: #0f1218;
+  color: #eaeaf0;
+}
+
+.articles-search input::placeholder {
+  color: #9aa0aa;
+}
+
+/* Articles container */
+.articles-list {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Article bars */
+.article-bar {
+  display: flex;
+  gap: 28px;
+  background: #12151c;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 24px;
+  align-items: center;
+}
+
+.article-bar img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+/* Content */
+.article-bar-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-bar-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.article-bar-content p {
+  color: #9aa0aa;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+/* Read link (reusing same style language) */
+.article-bar-content .read-link {
+  align-self: flex-start;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .article-bar img {
+    width: 100%;
+    height: 180px;
+  }
+}
+
