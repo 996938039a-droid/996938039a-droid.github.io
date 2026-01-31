@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Looming Amygdalan Crisis - Digital Overstimulation and the Rise of Limbic Capitalism
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/amygdlancrisi.png
 tldr: >
   Digital platforms systematically overstimulate the amygdala through
   emotionally optimized content, weakening rational control systems and
