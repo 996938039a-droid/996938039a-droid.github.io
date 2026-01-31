@@ -179,6 +179,8 @@ img {
 
 .slide-content h3 {
   font-size: 1.2rem;
+  align-self: center;            /* THIS centers the link itself */
+  text-align: center;
   margin-bottom: 10px;
   color: #fff;
 }
