@@ -37,6 +37,17 @@ body {
   padding-bottom: 12px;
 }
 
+/* Hide scrollbar but keep scroll functionality */
+.slider {
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE/Edge */
+}
+
+.slider::-webkit-scrollbar {
+  display: none;                  /* Chrome/Safari */
+}
+
+
 /* ================= Blog cards ================= */
 
 .slide {
@@ -71,18 +82,29 @@ body {
 
 /* ================= Arrow card ================= */
 
+/* ================= Arrow card ================= */
+
 .arrow-slide {
-  border: 1.5px dashed #ddd;
+  min-width: 280px;
+  max-width: 280px;
+  height: 180px;
+
+  border: 1px dashed #ddd;
+  border-radius: 14px;
   background: #fafafa;
 
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  gap: 16px;
+
+  padding: 24px;
+  text-align: left;
 }
 
 .arrow-btn {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   border: 2px solid #111;
 
@@ -90,12 +112,12 @@ body {
   align-items: center;
   justify-content: center;
 
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 500;
   color: #111;
   text-decoration: none;
 
-  margin-bottom: 12px;
+  flex-shrink: 0;
   transition: all 0.25s ease;
 }
 
@@ -105,15 +127,13 @@ body {
   transform: scale(1.05);
 }
 
-/* ================= Arrow text ================= */
-
 .arrow-text strong {
+  font-size: 16px;
   display: block;
-  font-size: 15px;
   margin-bottom: 4px;
 }
 
 .arrow-text span {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
 }
