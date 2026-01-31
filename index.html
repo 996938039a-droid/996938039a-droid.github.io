@@ -5,40 +5,64 @@ layout: null
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Signals & Patterns</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 
 <body>
-  <div class="container">
 
-    <section class="hero">
+  <!-- HERO BANNER -->
+  <section class="hero-banner">
+    <img
+      src="https://images.unsplash.com/photo-1555949963-aa79dcee981c"
+      alt="Abstract data networks"
+      class="hero-bg"
+    />
+
+    <div class="hero-overlay">
       <h1>Signals & Patterns</h1>
-
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
-           alt="Abstract systems">
-
       <p>
-        A research-driven blog decoding how information, incentives,
-        fear, and systems interact beneath the surface of global events.
+        Signals & Patterns is a data-driven editorial exploring how hidden
+        structures shape global outcomes — from economics and technology
+        to psychology, incentives, and collective behavior.
+        <br /><br />
+        Each article looks beyond surface-level narratives to identify
+        recurring patterns, systemic forces, and second-order effects
+        that quietly influence the world around us.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section class="blog-rail">
-      {% for post in site.posts limit:6 %}
-        <div class="blog-card">
-          <img src="{{ post.banner }}">
-          <div class="blog-card-content">
+  <!-- ARTICLE SLIDER -->
+  <section class="slider-section">
+    <div class="slider">
+
+      {% for post in site.posts limit:4 %}
+        <div class="slide">
+          <img src="{{ post.banner }}" alt="{{ post.title }}">
+          <div class="slide-content">
             <h3>{{ post.title }}</h3>
-            <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+            <p>{{ post.excerpt | strip_html | truncate: 90 }}</p>
             <a href="{{ post.url }}">Read →</a>
           </div>
         </div>
       {% endfor %}
-    </section>
 
-  </div>
+      <!-- VIEW ALL BLOGS CARD -->
+      <div class="slide slide-cta">
+        <a href="/blogs/">
+          <span class="cta-arrow">→</span>
+          <span class="cta-text">
+            Explore all blogs<br />
+            <small>Older analyses & patterns</small>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
 </body>
 </html>
