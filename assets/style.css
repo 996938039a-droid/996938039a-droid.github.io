@@ -63,21 +63,31 @@ body {
 }
 
 .arrow-slide a {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  border: 1.5px solid #ccc;
+  border: 2px solid #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
+  font-size: 36px;
+  font-weight: 500;
   text-decoration: none;
   color: #111;
   transition: all 0.2s ease;
 }
 
+
 .arrow-slide a:hover {
   background: #111;
   color: #fff;
-  border-color: #111;
+  transform: scale(1.05);
+}
+
+
+.arrow-label {
+  position: absolute;
+  bottom: 16px;
+  font-size: 14px;
+  color: #666;
 }
