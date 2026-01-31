@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta charset="UTF-8" />
+  <title>{{ page.title }} | Signals & Patterns</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
 
 <body>
+
+  <!-- ARTICLE HERO -->
+  <section class="hero-banner">
+    <img
+      src="{{ page.banner }}"
+      alt="{{ page.title }}"
+      class="hero-bg"
+    />
+
+    <div class="hero-overlay">
+      <h1>{{ page.title }}</h1>
+    </div>
+  </section>
+
+  <!-- ARTICLE CONTENT -->
   <article class="article">
 
-    <img src="{{ page.banner }}" class="hero-image">
+    {% if page.tldr %}
+      <section class="tldr">
+        <strong>TL;DR</strong>
+        <p>{{ page.tldr }}</p>
+      </section>
+    {% endif %}
 
-    <h1>{{ page.title }}</h1>
+    <section class="article-body">
+      {{ content }}
+    </section>
 
-    <div class="tldr">
-      <strong>TL;DR:</strong> {{ page.tldr }}
-    </div>
-
-    {{ content }}
+    <section class="article-footer">
+      <a href="/blogs/" class="read-link">← Back to all articles</a>
+    </section>
 
   </article>
+
 </body>
 </html>
