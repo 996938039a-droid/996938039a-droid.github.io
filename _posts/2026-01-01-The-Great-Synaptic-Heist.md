@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Great Synaptic Heist — A Global Descent into Digital Narcoticism
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/digitalnarco.png
 tldr: >
   Social media has evolved into the most pervasive and least regulated
   narcotic infrastructure in human history, hijacking dopamine pathways,
