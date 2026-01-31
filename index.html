@@ -5,43 +5,49 @@ layout: null
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Signals & Patterns</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/style.css" />
 </head>
+
 <body>
+  <div class="container">
 
-<header class="hero">
-  <h1>Signals & Patterns</h1>
-  <p>Data-driven analysis of global phenomena</p>
-</header>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Signals & Patterns</h1>
 
-<section class="slider-container">
-  <div class="slider" id="blogSlider">
+      <img
+        src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3"
+        alt="Abstract data patterns"
+      />
 
-  {% for post in site.posts limit:4 %}
-    <div class="slide">
-      <h3>{{ post.title }}</h3>
-      <p>{{ post.description }}</p>
-      <a href="{{ post.url }}">Read →</a>
+      <p>
+        Signals & Patterns is a data-driven editorial exploring how
+        economic forces, behavioral psychology, technology, and
+        information systems shape real-world outcomes.
+        <br /><br />
+        Each article focuses on uncovering hidden structures beneath
+        everyday phenomena — separating noise from signal.
+      </p>
+    </section>
+
+    <!-- BLOGS -->
+    <section class="blog-grid">
+      {% for post in site.posts limit:4 %}
+        <div class="blog-card">
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <a href="{{ post.url }}">Read →</a>
+        </div>
+      {% endfor %}
+    </section>
+
+    <div class="view-all">
+      <a href="/blogs/">View all blogs →</a>
     </div>
-  {% endfor %}
 
-  <!-- Final CTA card -->
-  <div class="slide arrow-slide">
-    <a href="/blogs/" class="arrow-btn">→</a>
-    <div class="arrow-text">
-      <strong>Explore all blogs</strong>
-      <span>Older analyses and patterns</span>
-    </div>
   </div>
-
-</div>
-
-</section>
-
-
-<script src="/assets/slider.js"></script>
 </body>
 </html>
