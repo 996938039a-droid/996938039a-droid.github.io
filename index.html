@@ -20,7 +20,7 @@ layout: null
 <section class="slider-container">
   <div class="slider" id="blogSlider">
 
-    {% for post in site.posts %}
+    {% for post in site.posts limit:4 %}
       <div class="slide">
         <h3>{{ post.title }}</h3>
         <p>{{ post.description }}</p>
