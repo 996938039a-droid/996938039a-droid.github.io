@@ -5,48 +5,39 @@ layout: null
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Signals & Patterns</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/assets/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 
 <body>
   <div class="container">
 
-    <!-- HERO -->
     <section class="hero">
       <h1>Signals & Patterns</h1>
 
-      <img
-        src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3"
-        alt="Abstract data patterns"
-      />
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+           alt="Abstract systems">
 
       <p>
-        Signals & Patterns is a data-driven editorial exploring how
-        economic forces, behavioral psychology, technology, and
-        information systems shape real-world outcomes.
-        <br /><br />
-        Each article focuses on uncovering hidden structures beneath
-        everyday phenomena — separating noise from signal.
+        A research-driven blog decoding how information, incentives,
+        fear, and systems interact beneath the surface of global events.
       </p>
     </section>
 
-    <!-- BLOGS -->
-    <section class="blog-grid">
-      {% for post in site.posts limit:4 %}
+    <section class="blog-rail">
+      {% for post in site.posts limit:6 %}
         <div class="blog-card">
-          <h3>{{ post.title }}</h3>
-          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
-          <a href="{{ post.url }}">Read →</a>
+          <img src="{{ post.banner }}">
+          <div class="blog-card-content">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+            <a href="{{ post.url }}">Read →</a>
+          </div>
         </div>
       {% endfor %}
     </section>
-
-    <div class="view-all">
-      <a href="/blogs/">View all blogs →</a>
-    </div>
 
   </div>
 </body>
