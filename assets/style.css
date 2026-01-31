@@ -1,0 +1,56 @@
+body {
+  font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+  margin: 0;
+  padding: 40px;
+  color: #111;
+}
+
+.hero {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+}
+
+.slide {
+  min-width: 280px;
+  max-width: 280px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.slide h3 {
+  margin-top: 0;
+}
+
+.slide a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+.cta {
+  margin-top: 40px;
+}
+
+.cta a {
+  text-decoration: none;
+  font-weight: 500;
+}
