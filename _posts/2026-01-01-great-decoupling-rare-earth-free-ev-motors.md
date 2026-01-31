@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Great Decoupling - The Global Race for Rare-Earth-Free EV Motors"
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/thegreatdecoupling.png
 tldr: >
   As geopolitical risk and supply concentration around China intensify,
   automakers are rapidly redesigning electric motors to eliminate
