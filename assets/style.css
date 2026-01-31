@@ -157,12 +157,12 @@ img {
 }
 
 .read-link {
-  margin-top: auto;          /* keeps it at the bottom */
-  text-align: center;        /* centers the text */
+  margin-top: auto;              /* keeps it at bottom */
+  align-self: center;            /* THIS centers the link itself */
+  text-align: center;
   color: #5da9ff;
   font-weight: 500;
-  display: block;            /* allows centering */
-  padding-top: 8px;
+  padding-top: 12px;
 }
 
 .read-link:hover {
