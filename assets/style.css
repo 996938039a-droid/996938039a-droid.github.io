@@ -1,20 +1,29 @@
+/* ================= Base ================= */
+
 body {
   font-family: system-ui, -apple-system, Segoe UI, sans-serif;
   margin: 0;
   padding: 40px;
   color: #111;
+  background: #fff;
 }
 
 .hero {
   max-width: 900px;
-  margin: auto;
   margin-bottom: 40px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 44px;
   margin-bottom: 8px;
 }
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* ================= Slider ================= */
 
 .slider-container {
   overflow: hidden;
@@ -25,69 +34,86 @@ body {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  cursor: grab;
+  padding-bottom: 12px;
 }
+
+/* ================= Blog cards ================= */
 
 .slide {
   min-width: 280px;
   max-width: 280px;
+  height: 180px;
   border: 1px solid #ddd;
+  border-radius: 14px;
   padding: 20px;
-  border-radius: 12px;
   background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .slide h3 {
-  margin-top: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+.slide p {
+  font-size: 14px;
+  color: #444;
 }
 
 .slide a {
   text-decoration: none;
   color: #0066cc;
-}
-
-.cta {
-  margin-top: 40px;
-}
-
-.cta a {
-  text-decoration: none;
   font-weight: 500;
 }
 
+/* ================= Arrow card ================= */
 
 .arrow-slide {
-  display: flex;
+  border: 1.5px dashed #ddd;
+  background: #fafafa;
+
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-.arrow-slide a {
+.arrow-btn {
   width: 72px;
   height: 72px;
   border-radius: 50%;
   border: 2px solid #111;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 36px;
   font-weight: 500;
-  text-decoration: none;
   color: #111;
-  transition: all 0.2s ease;
+  text-decoration: none;
+
+  margin-bottom: 12px;
+  transition: all 0.25s ease;
 }
 
-
-.arrow-slide a:hover {
+.arrow-btn:hover {
   background: #111;
   color: #fff;
   transform: scale(1.05);
 }
 
+/* ================= Arrow text ================= */
 
-.arrow-label {
-  position: absolute;
-  bottom: 16px;
-  font-size: 14px;
+.arrow-text strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.arrow-text span {
+  font-size: 13px;
   color: #666;
 }
