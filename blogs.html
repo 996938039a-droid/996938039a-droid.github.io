@@ -1,0 +1,26 @@
+---
+layout: null
+title: All Blogs
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>All Blogs</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<h1>All Blogs</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
