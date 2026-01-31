@@ -45,7 +45,9 @@ layout: null
           <div class="slide-content">
             <h3>{{ post.title }}</h3>
             <p>{{ post.excerpt | strip_html | truncate: 90 }}</p>
-            <a href="{{ post.url }}">Read →</a>
+            <a href="{{ post.url }}" class="read-link">
+        Read →
+      </a>
           </div>
         </div>
       {% endfor %}
