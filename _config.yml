@@ -1,0 +1,7 @@
+title: Signals & Patterns
+description: Data-driven analysis of global phenomena
+url: https://signalsandpatterns.com
+baseurl: ""
+
+markdown: kramdown
+permalink: /blog/:title/
