@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Physics of Intent: Why Doubt 'Kills' Manifestation"
-banner: /assets/images/blending-minds-and-data-flows.png
+banner: /assets/images/physicsofintention.png
 tldr: >
   Doubt does not merely weaken intention psychologically — it functions like a
   measurement event that collapses potential outcomes. Drawing from quantum
