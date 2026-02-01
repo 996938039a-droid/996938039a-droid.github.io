@@ -73,7 +73,7 @@ layout: null
             ></button>
           </div>
 
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          <p>{{ post.tldr | strip_html | truncate: 160 }}</p>
 
           <a href="{{ post.url }}" class="read-link">Read more</a>
         </div>
