@@ -52,16 +52,21 @@ layout: null
 
             
 
-            <div class="card-footer">
-  <a href="{{ post.url }}" class="read-link">Read more</a>
+            <a href="{{ post.url }}" class="read-link">
+              Read more
+            </a>
 
-  <div class="article-meta">
-    <span class="reading-time">4 min read</span>
-    <span class="meta-sep">·</span>
-    <button class="like-btn liked">♥ Liked (1)</button>
-  </div>
-</div>
-
+            <!-- META -->
+            <div class="card-meta">
+              <span
+                class="reading-time"
+                data-text="{{ post.content | strip_html | escape }}">
+              </span>
+              ·
+              <button
+                class="like-btn"
+                data-slug="{{ post.url }}">
+              </button>
               
             </div>
           </div>
