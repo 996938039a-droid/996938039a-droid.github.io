@@ -441,3 +441,33 @@ img {
   margin-top: 0;
 }
 
+
+
+/* ===============================
+   QUOTE PULL-OUTS
+================================ */
+
+.article-body blockquote {
+  margin: 100px auto;
+  padding: 42px 48px;
+  max-width: 680px;
+
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+
+  color: #ffffff;
+
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.3),
+    0 50px 90px rgba(0,0,0,0.2);
+}
