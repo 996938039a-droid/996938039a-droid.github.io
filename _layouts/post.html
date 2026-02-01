@@ -5,11 +5,16 @@
   <title>{{ page.title }} | Signals & Patterns</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Utilities -->
+  <script src="/assets/reading-time.js"></script>
+  <script src="/assets/likes.js"></script>
 </head>
 
 <body>
-  <div class="section-progress" id="sectionProgress"></div>
 
+  <!-- Section Progress (Dots) -->
+  <div class="section-progress" id="sectionProgress"></div>
 
   <!-- ARTICLE HERO -->
   <section class="hero-banner">
@@ -18,11 +23,17 @@
       alt="{{ page.title }}"
       class="hero-bg"
     />
-
     <div class="hero-overlay">
       <h1>{{ page.title }}</h1>
     </div>
   </section>
+
+  <!-- META -->
+  <div class="article-meta">
+    <span id="readingTime"></span>
+    ·
+    <button class="like-btn" data-slug="{{ page.url }}"></button>
+  </div>
 
   <!-- ARTICLE CONTENT -->
   <article class="article">
@@ -44,109 +55,113 @@
 
   </article>
 
-<script>
-(function () {
-  const body = document.querySelector('.article-body');
-  if (!body) return;
-
-  let currentCard = null;
-  const children = Array.from(body.children);
-
-  children.forEach(node => {
-    if (node.tagName === 'H2') {
-      currentCard = document.createElement('section');
-      currentCard.className = 'article-card';
-      node.before(currentCard);
-    }
-
-    if (currentCard) {
-      currentCard.appendChild(node);
-    }
-  });
-})();
-</script>
-
-
+  <!-- 1. AUTO-CREATE SECTION CARDS (FROM H2) -->
   <script>
-const cards = document.querySelectorAll('.article-card');
+  (function () {
+    const body = document.querySelector('.article-body');
+    if (!body) return;
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+    let currentCard = null;
+    const children = Array.from(body.children);
+
+    children.forEach(node => {
+      if (node.tagName === 'H2') {
+        currentCard = document.createElement('section');
+        currentCard.className = 'article-card';
+        node.before(currentCard);
       }
+      if (currentCard) currentCard.appendChild(node);
     });
-  },
-  { threshold: 0.15 }
-);
+  })();
+  </script>
 
-cards.forEach(card => observer.observe(card));
-</script>
-
-
-<script>
-(function () {
-  const paragraphs = document.querySelectorAll('.article-body p');
-
-  paragraphs.forEach(p => {
-    const text = p.innerText.trim();
-
-    // Heuristic: single strong sentence
-    if (
-      text.length > 90 &&
-      text.length < 220 &&
-      !text.includes('?') &&
-      !p.querySelector('a')
-    ) {
-      p.classList.add('key-sentence');
-    }
-  });
-})();
-</script>
-
-  
-<script>
-(function () {
-  function initSectionProgress() {
-    const sections = document.querySelectorAll('.article-card');
-    const progress = document.getElementById('sectionProgress');
-
-    if (!sections.length || !progress) return;
-
-    // Clear in case of re-run
-    progress.innerHTML = '';
-
-    sections.forEach(() => {
-      const dot = document.createElement('div');
-      dot.className = 'section-progress-dot';
-      progress.appendChild(dot);
-    });
-
-    const dots = progress.querySelectorAll('.section-progress-dot');
+  <!-- 2. REVEAL ANIMATION FOR CARDS -->
+  <script>
+  (function () {
+    const cards = document.querySelectorAll('.article-card');
+    if (!cards.length) return;
 
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const index = Array.from(sections).indexOf(entry.target);
-            dots.forEach((dot, i) =>
-              dot.classList.toggle('active', i <= index)
-            );
+            entry.target.classList.add('is-visible');
           }
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.15 }
     );
 
-    sections.forEach(section => observer.observe(section));
-  }
+    cards.forEach(card => observer.observe(card));
+  })();
+  </script>
 
-  // Run AFTER DOM + card wrapping
-  window.addEventListener('load', initSectionProgress);
-})();
-</script>
+  <!-- 3. SECTION PROGRESS DOTS -->
+  <script>
+  (function () {
+    window.addEventListener('load', () => {
+      const sections = document.querySelectorAll('.article-card');
+      const progress = document.getElementById('sectionProgress');
+      if (!sections.length || !progress) return;
 
-  
+      progress.innerHTML = '';
+
+      sections.forEach(() => {
+        const dot = document.createElement('div');
+        dot.className = 'section-progress-dot';
+        progress.appendChild(dot);
+      });
+
+      const dots = progress.querySelectorAll('.section-progress-dot');
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const index = Array.from(sections).indexOf(entry.target);
+              dots.forEach((dot, i) =>
+                dot.classList.toggle('active', i <= index)
+              );
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+
+      sections.forEach(section => observer.observe(section));
+    });
+  })();
+  </script>
+
+  <!-- 4. KEY SENTENCE PULL-OUTS (SUBTLE) -->
+  <script>
+  (function () {
+    const paragraphs = document.querySelectorAll('.article-body p');
+    paragraphs.forEach(p => {
+      const text = p.innerText.trim();
+      if (
+        text.length > 90 &&
+        text.length < 220 &&
+        !text.includes('?') &&
+        !p.querySelector('a')
+      ) {
+        p.classList.add('key-sentence');
+      }
+    });
+  })();
+  </script>
+
+  <!-- 5. READING TIME -->
+  <script>
+  (function () {
+    const body = document.querySelector('.article-body');
+    if (!body) return;
+
+    const minutes = calculateReadingTime(body.innerText);
+    document.getElementById('readingTime').innerText =
+      `${minutes} min read`;
+  })();
+  </script>
+
 </body>
 </html>
