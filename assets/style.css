@@ -495,3 +495,27 @@ img {
   }
 }
 
+
+/* ===============================
+   ARTICLE META + LIKES
+================================ */
+
+.article-meta {
+  text-align: center;
+  margin: 24px 0 60px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.like-btn.liked {
+  color: #ff6b81;
+}
+
