@@ -580,52 +580,59 @@ img {
 }
 
 /* ===============================
-   CARD FOOTER (HOME PAGE)
+   HOME PAGE CARD FOOTER
 ================================ */
 
 .card-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  gap: 6px;                 /* tight vertical rhythm */
-  margin-top: 18px;
+  gap: 6px;              /* tight vertical spacing */
+  margin-top: 14px;
 }
 
 /* Read more link */
 .card-footer .read-link {
-  font-weight: 500;
   font-size: 1rem;
+  font-weight: 500;
 }
 
-/* Meta line */
-.article-meta {
+/* Meta row (reading time + like) */
+.card-meta {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 
-  font-size: 0.9rem;
+  font-size: 0.85rem;   /* smaller than Read more */
   color: var(--muted);
   line-height: 1;
 }
 
-/* Separator */
+/* Separator dot */
 .meta-sep {
   opacity: 0.6;
 }
 
 /* Like button */
-.like-btn {
+.card-meta .like-btn {
   background: none;
   border: none;
-  color: var(--accent);
-  cursor: pointer;
-  font-size: 0.9rem;
   padding: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--accent);
 }
 
-.like-btn.liked {
+.card-meta .like-btn.liked {
   color: #ff6b81;
 }
+
+.card-footer {
+  margin-top: 10px;
+}
+.card-meta .like-btn:hover {
+  transform: translateY(-1px);
+}
+
 
