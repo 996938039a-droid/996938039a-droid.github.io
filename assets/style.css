@@ -151,6 +151,10 @@ img {
   display: none;
 }
 
+/* ===============================
+   HOME PAGE SLIDE CARD
+================================ */
+
 .slide {
   min-width: 320px;
   background: #12151c;
@@ -163,18 +167,19 @@ img {
   flex-direction: column;
 }
 
-
+/* Card image */
 .slide img {
   height: 180px;
   width: 100%;
   object-fit: cover;
 }
 
+/* Content wrapper */
 .slide-content {
   padding: 22px;
   display: flex;
   flex-direction: column;
-  flex: 1; /* THIS is the key */
+  flex: 1; /* allows footer to sit at bottom */
 }
 
 .read-link {
@@ -584,32 +589,33 @@ img {
 ================================ */
 
 .card-footer {
+  margin-top: auto;        /* pushes footer to bottom */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;              /* tight vertical spacing */
-  margin-top: auto;
+  gap: 6px;
 }
 
-/* Read more link */
+/* Read more */
 .card-footer .read-link {
   font-size: 1rem;
   font-weight: 500;
+  color: var(--accent);
 }
 
-/* Meta row (reading time + like) */
+/* Meta row */
 .card-meta {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 
-  font-size: 0.85rem;   /* smaller than Read more */
+  font-size: 0.85rem;
   color: var(--muted);
   line-height: 1;
 }
 
-/* Separator dot */
+/* Separator */
 .meta-sep {
   opacity: 0.6;
 }
@@ -628,9 +634,6 @@ img {
   color: #ff6b81;
 }
 
-.card-footer {
-  margin-top: 10px;
-}
 .card-meta .like-btn:hover {
   transform: translateY(-1px);
 }
