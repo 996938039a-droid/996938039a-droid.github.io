@@ -9,9 +9,13 @@ layout: null
   <title>Signals & Patterns</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Reading time + likes -->
+  <script src="/assets/reading-time.js"></script>
+  <script src="/assets/likes.js"></script>
 </head>
 
-  <body>
+<body>
 
   <!-- HERO BANNER -->
   <section class="hero-banner">
@@ -42,12 +46,26 @@ layout: null
       {% for post in site.posts limit:4 %}
         <div class="slide">
           <img src="{{ post.banner }}" alt="{{ post.title }}">
+
           <div class="slide-content">
             <h3>{{ post.title }}</h3>
-          
+
+            <!-- META -->
+            <div class="card-meta">
+              <span
+                class="reading-time"
+                data-text="{{ post.content | strip_html | escape }}">
+              </span>
+              ·
+              <button
+                class="like-btn"
+                data-slug="{{ post.url }}">
+              </button>
+            </div>
+
             <a href="{{ post.url }}" class="read-link">
-        Read More
-      </a>
+              Read more
+            </a>
           </div>
         </div>
       {% endfor %}
@@ -65,6 +83,15 @@ layout: null
 
     </div>
   </section>
+
+  <!-- INIT READING TIME -->
+  <script>
+    document.querySelectorAll('.reading-time').forEach(el => {
+      const text = el.dataset.text || '';
+      const minutes = calculateReadingTime(text);
+      el.innerText = `${minutes} min read`;
+    });
+  </script>
 
 </body>
 </html>
