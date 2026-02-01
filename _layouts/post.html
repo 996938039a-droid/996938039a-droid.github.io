@@ -8,6 +8,8 @@
 </head>
 
 <body>
+  <div class="section-progress" id="sectionProgress"></div>
+
 
   <!-- ARTICLE HERO -->
   <section class="hero-banner">
@@ -83,6 +85,39 @@ cards.forEach(card => observer.observe(card));
 </script>
 
 
+<script>
+(function () {
+  const sections = document.querySelectorAll('.article-card');
+  const progress = document.getElementById('sectionProgress');
+
+  if (!sections.length || !progress) return;
+
+  // Create dots
+  sections.forEach(() => {
+    const dot = document.createElement('div');
+    dot.className = 'section-progress-dot';
+    progress.appendChild(dot);
+  });
+
+  const dots = progress.querySelectorAll('.section-progress-dot');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target);
+          dots.forEach((dot, i) =>
+            dot.classList.toggle('active', i <= index)
+          );
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  sections.forEach(section => observer.observe(section));
+})();
+</script>
 
   
 </body>
