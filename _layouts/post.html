@@ -87,35 +87,63 @@ cards.forEach(card => observer.observe(card));
 
 <script>
 (function () {
-  const sections = document.querySelectorAll('.article-card');
-  const progress = document.getElementById('sectionProgress');
+  const paragraphs = document.querySelectorAll('.article-body p');
 
-  if (!sections.length || !progress) return;
+  paragraphs.forEach(p => {
+    const text = p.innerText.trim();
 
-  // Create dots
-  sections.forEach(() => {
-    const dot = document.createElement('div');
-    dot.className = 'section-progress-dot';
-    progress.appendChild(dot);
+    // Heuristic: single strong sentence
+    if (
+      text.length > 90 &&
+      text.length < 220 &&
+      !text.includes('?') &&
+      !p.querySelector('a')
+    ) {
+      p.classList.add('key-sentence');
+    }
   });
+})();
+</script>
 
-  const dots = progress.querySelectorAll('.section-progress-dot');
+  
+<script>
+(function () {
+  function initSectionProgress() {
+    const sections = document.querySelectorAll('.article-card');
+    const progress = document.getElementById('sectionProgress');
 
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const index = Array.from(sections).indexOf(entry.target);
-          dots.forEach((dot, i) =>
-            dot.classList.toggle('active', i <= index)
-          );
-        }
-      });
-    },
-    { threshold: 0.4 }
-  );
+    if (!sections.length || !progress) return;
 
-  sections.forEach(section => observer.observe(section));
+    // Clear in case of re-run
+    progress.innerHTML = '';
+
+    sections.forEach(() => {
+      const dot = document.createElement('div');
+      dot.className = 'section-progress-dot';
+      progress.appendChild(dot);
+    });
+
+    const dots = progress.querySelectorAll('.section-progress-dot');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const index = Array.from(sections).indexOf(entry.target);
+            dots.forEach((dot, i) =>
+              dot.classList.toggle('active', i <= index)
+            );
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+  }
+
+  // Run AFTER DOM + card wrapping
+  window.addEventListener('load', initSectionProgress);
 })();
 </script>
 
