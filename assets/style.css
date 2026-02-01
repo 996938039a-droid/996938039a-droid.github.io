@@ -448,7 +448,7 @@ img {
 ================================ */
 
 .article-body .key-sentence {
-  font-size: 1.15rem;
+  font-size: 1.20rem;
   line-height: 1.9;
   color: #f0f2f6;
 
@@ -456,5 +456,41 @@ img {
   max-width: 680px;
 
   font-weight: 500;
+}
+
+
+/* ===============================
+   SECTION PROGRESS (DOTS)
+================================ */
+
+.section-progress {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 9999;
+}
+
+.section-progress-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.section-progress-dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+  .section-progress {
+    display: none;
+  }
 }
 
