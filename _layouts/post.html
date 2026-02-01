@@ -42,5 +42,37 @@
 
   </article>
 
+<script>
+(function () {
+  const body = document.querySelector('.article-body');
+  if (!body) return;
+
+  // Find TLDR
+  const tldr = document.querySelector('.tldr');
+  if (!tldr) return;
+
+  // Everything after TLDR becomes card territory
+  let current = tldr.nextElementSibling;
+  let card = null;
+
+  while (current) {
+    if (current.tagName === 'H2' || current.tagName === 'H3') {
+      card = document.createElement('section');
+      card.className = 'article-card';
+      current.before(card);
+    }
+
+    if (card) {
+      const next = current.nextElementSibling;
+      card.appendChild(current);
+      current = next;
+    } else {
+      current = current.nextElementSibling;
+    }
+  }
+})();
+</script>
+
+  
 </body>
 </html>
