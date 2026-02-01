@@ -521,46 +521,55 @@ img {
 
 
 /* ===============================
-   ARTICLE FOOTER ROW (LIST PAGES)
+   COMPACT ARTICLE FOOTER (FIXED)
 ================================ */
 
 .article-footer-row {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 12px;
+  justify-content: space-between;
+
+  margin-top: 8px;   /* SMALL, controlled */
+  line-height: 1;    /* kills vertical bloat */
 }
 
-/* Read more stays calm */
+/* Read more baseline */
 .article-footer-row .read-link {
+  font-size: 0.95rem;
   font-weight: 500;
+  line-height: 1;
 }
 
-/* Meta aligned neatly */
-.article-footer-row .article-meta {
-  display: flex;
+/* Inline meta — NO extra height */
+.article-meta-inline {
+  display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.9rem;
+
+  font-size: 0.85rem;
   color: var(--muted);
+  line-height: 1;
+  white-space: nowrap; /* prevents wrapping */
 }
 
-/* Separator dot */
-.article-footer-row .meta-sep {
+/* Dot separator */
+.meta-sep {
   opacity: 0.6;
 }
 
-/* Like button subtle */
-.article-footer-row .like-btn {
+/* Like button — inline, no box */
+.like-btn {
   background: none;
   border: none;
+  padding: 0;
+  margin: 0;
+
+  font-size: 0.85rem;
   color: var(--accent);
   cursor: pointer;
-  padding: 0;
-  font-size: 0.9rem;
+  line-height: 1;
 }
 
-.article-footer-row .like-btn.liked {
+.like-btn.liked {
   color: #ff6b81;
 }
-
