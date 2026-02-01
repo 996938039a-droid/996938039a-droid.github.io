@@ -501,11 +501,16 @@ img {
 ================================ */
 
 .article-meta {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
   margin: 24px 0 60px;
   color: var(--muted);
   font-size: 0.95rem;
 }
+
 
 .like-btn {
   background: none;
