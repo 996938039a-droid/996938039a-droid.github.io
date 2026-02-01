@@ -44,40 +44,23 @@
 
 <script>
 (function () {
-  const article = document.querySelector('.article-body');
-  if (!article) return;
+  const body = document.querySelector('.article-body');
+  if (!body) return;
 
-  const tldr = document.querySelector('.tldr');
-  if (!tldr) return;
+  let currentCard = null;
+  const children = Array.from(body.children);
 
-  let current = tldr.nextSibling;
-  let card = null;
-
-  while (current) {
-    // Skip text nodes and HRs
-    if (
-      current.nodeType === Node.TEXT_NODE ||
-      (current.tagName && current.tagName.toLowerCase() === 'hr')
-    ) {
-      current = current.nextSibling;
-      continue;
+  children.forEach(node => {
+    if (node.tagName === 'H2') {
+      currentCard = document.createElement('section');
+      currentCard.className = 'article-card';
+      node.before(currentCard);
     }
 
-    // Start a new card at each H2 / H3
-    if (current.tagName === 'H2' || current.tagName === 'H3') {
-      card = document.createElement('section');
-      card.className = 'article-card';
-      current.before(card);
+    if (currentCard) {
+      currentCard.appendChild(node);
     }
-
-    if (card) {
-      const next = current.nextSibling;
-      card.appendChild(current);
-      current = next;
-    } else {
-      current = current.nextSibling;
-    }
-  }
+  });
 })();
 </script>
 
