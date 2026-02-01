@@ -61,22 +61,23 @@ layout: null
           <h3>{{ post.title }}</h3>
 
           <!-- META: reading time + like -->
-          <div class="article-meta">
-            <span
-              class="reading-time"
-              data-text="{{ post.content | strip_html | escape }}"
-            ></span>
-            ·
-            <button
-              class="like-btn"
-              data-slug="{{ post.url }}"
-            ></button>
-          </div>
-
           <p>{{ post.tldr | strip_html | truncate: 160 }}</p>
 
-          <a href="{{ post.url }}" class="read-link">Read more</a>
-        </div>
+<div class="article-footer-row">
+  <a href="{{ post.url }}" class="read-link">Read more</a>
+
+  <div class="article-meta">
+    <span
+      class="reading-time"
+      data-text="{{ post.content | strip_html | escape }}"
+    ></span>
+    <span class="meta-sep">·</span>
+    <button
+      class="like-btn"
+      data-slug="{{ post.url }}"
+    ></button>
+  </div>
+</div>
       </article>
     {% endfor %}
 
