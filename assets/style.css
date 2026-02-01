@@ -519,3 +519,48 @@ img {
   color: #ff6b81;
 }
 
+
+/* ===============================
+   ARTICLE FOOTER ROW (LIST PAGES)
+================================ */
+
+.article-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+/* Read more stays calm */
+.article-footer-row .read-link {
+  font-weight: 500;
+}
+
+/* Meta aligned neatly */
+.article-footer-row .article-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Separator dot */
+.article-footer-row .meta-sep {
+  opacity: 0.6;
+}
+
+/* Like button subtle */
+.article-footer-row .like-btn {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.article-footer-row .like-btn.liked {
+  color: #ff6b81;
+}
+
