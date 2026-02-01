@@ -44,18 +44,26 @@
 
 <script>
 (function () {
-  const body = document.querySelector('.article-body');
-  if (!body) return;
+  const article = document.querySelector('.article-body');
+  if (!article) return;
 
-  // Find TLDR
   const tldr = document.querySelector('.tldr');
   if (!tldr) return;
 
-  // Everything after TLDR becomes card territory
-  let current = tldr.nextElementSibling;
+  let current = tldr.nextSibling;
   let card = null;
 
   while (current) {
+    // Skip text nodes and HRs
+    if (
+      current.nodeType === Node.TEXT_NODE ||
+      (current.tagName && current.tagName.toLowerCase() === 'hr')
+    ) {
+      current = current.nextSibling;
+      continue;
+    }
+
+    // Start a new card at each H2 / H3
     if (current.tagName === 'H2' || current.tagName === 'H3') {
       card = document.createElement('section');
       card.className = 'article-card';
@@ -63,11 +71,11 @@
     }
 
     if (card) {
-      const next = current.nextElementSibling;
+      const next = current.nextSibling;
       card.appendChild(current);
       current = next;
     } else {
-      current = current.nextElementSibling;
+      current = current.nextSibling;
     }
   }
 })();
@@ -91,9 +99,7 @@ const observer = new IntersectionObserver(
 cards.forEach(card => observer.observe(card));
 </script>
 
-<script>
-  alert("POST LAYOUT JS IS RUNNING");
-</script>
+
 
   
 </body>
