@@ -639,3 +639,73 @@ img {
 }
 
 
+/* ===============================
+   MOBILE FIXES
+================================ */
+@media (max-width: 768px) {
+
+  /* Fix 100vh bug on mobile */
+  .hero-banner {
+    min-height: 100svh;       /* modern safe viewport */
+    height: auto;
+  }
+
+  /* Allow content to flow naturally */
+  .hero-overlay {
+    position: relative;
+    padding: 80px 20px 60px;
+  }
+
+  /* Scale down hero title */
+  .hero-overlay h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  /* Scale description */
+  .hero-overlay p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Prevent text clipping */
+  section {
+    overflow: visible;
+  }
+
+  /* Slider spacing */
+  .slider-section {
+    padding: 40px 16px;
+  }
+
+  /* Cards fit viewport */
+  .slide {
+    min-width: 85%;
+  }
+
+  /* Article pages */
+  .article {
+    padding: 60px 18px;
+  }
+
+  .article h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .tldr {
+    font-size: 0.95rem;
+  }
+
+  .article-body p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /* Section progress dots (if present) */
+  .section-progress {
+    display: none;
+  }
+}
+
+
