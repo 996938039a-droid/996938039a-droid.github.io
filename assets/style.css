@@ -584,4 +584,69 @@ img {
   color: #ff6b81;
 }
 
-*/
+/* ===============================
+   HOME PAGE CARD FOOTER
+================================ */
+
+.card-footer {
+  margin-top: auto;        /* pushes footer to bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Read more */
+.card-footer .read-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Meta row */
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1;
+}
+
+/* Separator */
+.meta-sep {
+  opacity: 0.6;
+}
+
+/* Like button */
+.card-meta .like-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.card-meta .like-btn.liked {
+  color: #ff6b81;
+}
+
+.card-meta .like-btn:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ===============================
+   MOBILE TITLE SIZE FIX ONLY
+================================ */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2.1rem;   /* reduced from desktop */
+    line-height: 1.2;
+    max-width: 90%;
+    word-break: break-word;
+  }
+}
