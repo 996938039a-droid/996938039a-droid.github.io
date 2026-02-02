@@ -493,13 +493,13 @@ img {
   transform: scale(1.25);
 }
 
-/* Hide on mobile */
+/* Hide on mobile 
 @media (max-width: 768px) {
   .section-progress {
     display: none;
   }
 }
-
+*/
 
 /* ===============================
    ARTICLE META + LIKES
@@ -584,78 +584,4 @@ img {
   color: #ff6b81;
 }
 
-/* ===============================
-   MOBILE HERO FIX (SAFE)
-================================ */
-@media (max-width: 768px) {
-
-  /* Use safe viewport height without breaking overlay */
-  .hero-banner {
-    min-height: 100svh;
-    height: auto;
-  }
-
-  /* KEEP overlay absolute */
-  .hero-overlay {
-    position: absolute;
-    inset: 0;
-    padding: 0 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Responsive title without overflow */
-  .hero-overlay h1 {
-    font-size: clamp(1.9rem, 6vw, 2.4rem);
-    line-height: 1.15;
-    max-width: 90%;
-    margin-bottom: 20px;
-    word-break: break-word;
-  }
-
-  /* Description scaling */
-  .hero-overlay p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    max-width: 92%;
-  }
-
-  /* Slider spacing */
-  .slider-section {
-    padding: 40px 16px;
-  }
-
-  /* Cards fit viewport */
-  .slide {
-    min-width: 85%;
-  }
-
-  /* Article pages */
-  .article {
-    padding: 60px 18px;
-  }
-
-  .article h1 {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-    line-height: 1.25;
-  }
-
-  .tldr {
-    font-size: 0.95rem;
-  }
-
-  .article-body p {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-
-  /* Hide progress dots on mobile */
-  .section-progress {
-    display: none;
-  }
-}
-
+*/
