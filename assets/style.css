@@ -585,92 +585,43 @@ img {
 }
 
 /* ===============================
-   HOME PAGE CARD FOOTER
-================================ */
-
-.card-footer {
-  margin-top: auto;        /* pushes footer to bottom */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Read more */
-.card-footer .read-link {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--accent);
-}
-
-/* Meta row */
-.card-meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-
-  font-size: 0.85rem;
-  color: var(--muted);
-  line-height: 1;
-}
-
-/* Separator */
-.meta-sep {
-  opacity: 0.6;
-}
-
-/* Like button */
-.card-meta .like-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 0.85rem;
-  cursor: pointer;
-  color: var(--accent);
-}
-
-.card-meta .like-btn.liked {
-  color: #ff6b81;
-}
-
-.card-meta .like-btn:hover {
-  transform: translateY(-1px);
-}
-
-
-/* ===============================
-   MOBILE FIXES
+   MOBILE HERO FIX (SAFE)
 ================================ */
 @media (max-width: 768px) {
 
-  /* Fix 100vh bug on mobile */
+  /* Use safe viewport height without breaking overlay */
   .hero-banner {
-    min-height: 100svh;       /* modern safe viewport */
+    min-height: 100svh;
     height: auto;
   }
 
-  /* Allow content to flow naturally */
+  /* KEEP overlay absolute */
   .hero-overlay {
-    position: relative;
-    padding: 80px 20px 60px;
+    position: absolute;
+    inset: 0;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
-  /* Scale down hero title */
+  /* Responsive title without overflow */
   .hero-overlay h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
+    font-size: clamp(1.9rem, 6vw, 2.4rem);
+    line-height: 1.15;
+    max-width: 90%;
+    margin-bottom: 20px;
+    word-break: break-word;
   }
 
-  /* Scale description */
+  /* Description scaling */
   .hero-overlay p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
-  }
-
-  /* Prevent text clipping */
-  section {
-    overflow: visible;
+    max-width: 92%;
   }
 
   /* Slider spacing */
@@ -689,7 +640,7 @@ img {
   }
 
   .article h1 {
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
     line-height: 1.25;
   }
 
@@ -702,10 +653,9 @@ img {
     line-height: 1.8;
   }
 
-  /* Section progress dots (if present) */
+  /* Hide progress dots on mobile */
   .section-progress {
     display: none;
   }
 }
-
 
