@@ -493,13 +493,13 @@ img {
   transform: scale(1.25);
 }
 
-/* Hide on mobile */
+/* Hide on mobile 
 @media (max-width: 768px) {
   .section-progress {
     display: none;
   }
 }
-
+*/
 
 /* ===============================
    ARTICLE META + LIKES
