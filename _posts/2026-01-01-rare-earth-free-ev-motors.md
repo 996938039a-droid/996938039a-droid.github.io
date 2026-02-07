@@ -132,18 +132,30 @@ The Auto Holy Grail has changed.
 
 It is no longer the most powerful motor—it is the most **sovereign, scalable, and resilient** one.
 
----
 
 ## FAQ
 
-**Do EVs need rare earth magnets?**  
-No. Many EV motors operate without rare earth magnets using electrical excitation, induction, or ferrite-based designs.
----
-**Are rare earth free EV motors less efficient?**  
-Modern designs can achieve efficiency comparable to permanent magnet motors, while offering greater supply-chain resilience.
----
-**Why is China dominant in rare earth processing?**  
-China invested early and heavily in refining infrastructure, creating dominance in processing rather than raw reserves.
----
-**Is India moving toward rare earth free EV motors?**  
-Yes. India is investing in ferrite-based motor designs, domestic processing capacity, and alternative motor architectures to reduce import dependence.
+
+### Do EVs need rare earth magnets?
+No. Electric vehicles do not inherently require rare earth magnets. Many EV motors operate without them by using electrical excitation, inductive systems, or ferrite-based magnetic materials, which significantly reduce dependence on rare earth supply chains.
+
+### What are rare earth free EV motors?
+Rare earth free EV motors are electric vehicle motors designed without permanent magnets made from rare earth elements such as neodymium or dysprosium. Instead, they rely on electrically excited rotors, inductive excitation, or non–rare-earth magnetic materials.
+
+### Are rare earth free EV motors less efficient than permanent magnet motors?
+Not necessarily. Modern rare earth free motor designs can achieve efficiency levels comparable to permanent magnet synchronous motors, while offering greater supply-chain resilience and lower geopolitical risk.
+
+### Why is China dominant in rare earth processing?
+China built extensive rare earth processing and refining infrastructure decades earlier than most countries, giving it control over a majority of global refining capacity—even though it does not hold a majority of global reserves.
+
+### Which automakers are using rare earth free EV motors?
+Automakers such as BMW, along with suppliers like MAHLE and ZF, are already deploying or developing EV motor architectures that avoid rare earth magnets through electrical or inductive excitation.
+
+### Are ferrite motors suitable for mass-market EVs?
+Yes. Ferrite-based motors are well-suited for cost-sensitive and high-volume EV segments. While ferrite magnets are less powerful than rare earth magnets, optimized motor design can offset this limitation at significantly lower cost.
+
+### Why are rare earth free EV motors important for India?
+India imports a large share of its rare earth requirements despite holding substantial reserves. Rare earth free EV motors reduce exposure to import risks, price volatility, and geopolitical pressure, making large-scale electrification more sustainable.
+
+### Will rare earth magnets disappear from EVs completely?
+Unlikely in the near term. Rare earth magnets may continue to be used in ultra-premium or high-performance EV segments, while rare earth free motor designs are expected to dominate mass-market and strategically critical applications.
