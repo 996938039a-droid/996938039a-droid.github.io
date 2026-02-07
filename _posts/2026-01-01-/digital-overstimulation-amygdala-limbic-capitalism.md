@@ -220,4 +220,3 @@ Awareness is necessary but insufficient. Structural boundaries, cultural norms, 
 
 ### What is cognitive capital?
 Cognitive capital refers to the collective capacity of individuals and societies to focus, reason, plan, and regulate emotions. Chronic digital overstimulation erodes this capital, reducing productivity, creativity, and long-term resilience.
-
