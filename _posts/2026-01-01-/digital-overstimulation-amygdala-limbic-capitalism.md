@@ -16,7 +16,7 @@ tldr: >
   informed choice.
 
 ---
-## The Amygdalan Crisis: How Digital Overstimulation Hijacks the Brain and Fuels Limbic Capitalism
+
 
 ### What Is the Amygdalan Crisis?
 
