@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Governments Decline: The Endogenous Decay of High-Functioning Power"
-description: "A 7,000-word research-grade analysis explaining why governments decline through endogenous mechanisms of stability, bureaucracy, elite consolidation, complexity, and cultural decadence. Grounded in Ibn Khaldun, Michels, Olson, Tainter, Nietzsche, and comparative imperial history."
+description: "Anlaysis explaining why governments decline through endogenous mechanisms of stability, bureaucracy, elite consolidation, complexity, and cultural decadence. Grounded in Ibn Khaldun, Michels, Olson, Tainter, Nietzsche, and comparative imperial history."
 keywords:
   - "why governments decline"
   - "endogenous state decay"
