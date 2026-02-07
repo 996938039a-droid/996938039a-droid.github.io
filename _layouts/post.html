@@ -64,18 +64,9 @@
       {{ content }}
     </section>
 
-{% if page.faqs %}
-      <section class="article-faqs">
-        <h2>Frequently Asked Questions</h2>
-
-        {% for faq in page.faqs %}
-          <div class="faq-item">
-            <h3 class="faq-question">{{ faq.question }}</h3>
-            <p class="faq-answer">{{ faq.answer }}</p>
-          </div>
-        {% endfor %}
-      </section>
-    {% endif %}
+<section class="article-faqs" id="articleFaqs" hidden>
+  <h2>Frequently Asked Questions</h2>
+</section>
 
     
     <section class="article-footer">
@@ -192,26 +183,100 @@
   })();
   </script>
 
-{% if page.faqs %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {% for faq in page.faqs %}
-    {
+
+ <script>
+(function () {
+  const body = document.querySelector('.article-body');
+  const faqContainer = document.getElementById('articleFaqs');
+  if (!body || !faqContainer) return;
+
+  const nodes = Array.from(body.children);
+  let inFAQ = false;
+  let currentQ = null;
+  const faqs = [];
+
+  nodes.forEach(node => {
+    if (node.tagName === 'H2' && node.innerText.trim().toLowerCase() === 'faq') {
+      inFAQ = true;
+      node.remove();
+      return;
+    }
+
+    if (inFAQ && node.tagName === 'H2') {
+      inFAQ = false;
+    }
+
+    if (!inFAQ) return;
+
+    if (node.tagName === 'H3') {
+      currentQ = {
+        question: node.innerText.trim(),
+        answer: ''
+      };
+      faqs.push(currentQ);
+      node.remove();
+      return;
+    }
+
+    if (currentQ && node.tagName === 'P') {
+      currentQ.answer += node.innerText.trim() + ' ';
+      node.remove();
+    }
+  });
+
+  if (!faqs.length) return;
+
+  faqContainer.hidden = false;
+
+  faqs.forEach((faq, index) => {
+    const item = document.createElement('div');
+    item.className = 'faq-item';
+
+    item.innerHTML = `
+      <button class="faq-question" aria-expanded="false">
+        ${faq.question}
+      </button>
+      <div class="faq-answer">
+        <p>${faq.answer.trim()}</p>
+      </div>
+    `;
+
+    faqContainer.appendChild(item);
+  });
+
+  // Accordion behavior
+  faqContainer.addEventListener('click', e => {
+    const btn = e.target.closest('.faq-question');
+    if (!btn) return;
+
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    faqContainer.querySelectorAll('.faq-question')
+      .forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+    btn.setAttribute('aria-expanded', !expanded);
+  });
+
+  // SEO: Inject FAQ schema
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
       "@type": "Question",
-      "name": "{{ faq.question | escape }}",
+      "name": f.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "{{ faq.answer | escape }}"
+        "text": f.answer.trim()
       }
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
+    }))
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.body.appendChild(script);
+})();
 </script>
-{% endif %}
+ 
 
 <script type="application/ld+json">
 {
@@ -243,6 +308,41 @@
 }
 </script>
 
+<script>
+(function () {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": []
+  };
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question')?.innerText.trim();
+    const answer = item.querySelector('.faq-answer')?.innerText.trim();
+
+    if (!question || !answer) return;
+
+    schema.mainEntity.push({
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer
+      }
+    });
+  });
+
+  if (!schema.mainEntity.length) return;
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+})();
+</script>
 
   
 </body>
