@@ -653,7 +653,7 @@ img {
 
 /* ===============================
    FAQ ACCORDION
-================================ */
+================================ 
 
 .article-faqs {
   margin-top: 96px;
@@ -699,4 +699,40 @@ img {
   margin-top: 16px;
   color: var(--muted);
   line-height: 1.7;
+}*/
+
+.faq-section {
+  margin-top: 120px;
+}
+
+.faq-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 18px 0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.15rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-answer p {
+  margin-top: 14px;
+  color: #9aa0aa;
 }
