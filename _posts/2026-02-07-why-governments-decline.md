@@ -15,9 +15,9 @@ tldr: >
   exhaustion that undermine adaptability and legitimacy from within.
 ---
 
-# Why Governments Decline: The Endogenous Decay of High-Functioning Power
+## Why Governments Decline: The Endogenous Decay of High-Functioning Power
 
-## Introduction: Decline as an Internal Process
+#### Decline as an Internal Process
 
 The dominant intuition about political decline is catastrophist. Governments, it is commonly assumed, collapse because they are invaded, corrupted, defeated, or mismanaged. Decline is imagined as a failure event—a rupture imposed from the outside or triggered by spectacular incompetence at the top. This intuition is historically shallow and analytically misleading.
 
