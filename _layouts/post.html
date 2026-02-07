@@ -7,6 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/assets/style.css" />
 
+  <!-- SEO: Canonical & Indexing -->
+  {% if page.canonical %}
+    <link rel="canonical" href="{{ page.canonical }}">
+  {% else %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {% endif %}
+
+  {% if page.noindex == true %}
+    <meta name="robots" content="noindex, nofollow">
+  {% else %}
+    <meta name="robots" content="index, follow">
+  {% endif %}
+
+  
   <!-- Utilities -->
   <script src="/assets/reading-time.js"></script>
   <script src="/assets/likes.js"></script>
@@ -50,6 +64,20 @@
       {{ content }}
     </section>
 
+{% if page.faqs %}
+      <section class="article-faqs">
+        <h2>Frequently Asked Questions</h2>
+
+        {% for faq in page.faqs %}
+          <div class="faq-item">
+            <h3 class="faq-question">{{ faq.question }}</h3>
+            <p class="faq-answer">{{ faq.answer }}</p>
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    
     <section class="article-footer">
       <a href="/blogs/" class="read-link">← Back to all articles</a>
     </section>
@@ -164,5 +192,58 @@
   })();
   </script>
 
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question | escape }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.answer | escape }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "description": "{{ page.tldr | strip_html | escape }}",
+  "image": "{{ site.url }}{{ page.banner }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{% if page.author %}{{ page.author.name }}{% else %}Signals & Patterns{% endif %}",
+    "url": "{% if page.author %}{{ page.author.url }}{% else %}{{ site.url }}{% endif %}",
+    "image": "{% if page.author %}{{ page.author.image }}{% endif %}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Signals & Patterns",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.url }}{% endif %}"
+  }
+}
+</script>
+
+
+  
 </body>
 </html>
