@@ -184,51 +184,56 @@
   </script>
 
 
- <script>
+<script>
 (function () {
   const body = document.querySelector('.article-body');
   const faqContainer = document.getElementById('articleFaqs');
   if (!body || !faqContainer) return;
 
-  const nodes = Array.from(body.children);
-  let inFAQ = false;
-  let currentQ = null;
+  const children = Array.from(body.children);
+
+  // 1. Find FAQ start
+  const faqStartIndex = children.findIndex(
+    el => el.tagName === 'H2' && el.textContent.trim().toLowerCase() === 'faq'
+  );
+
+  if (faqStartIndex === -1) return;
+
   const faqs = [];
+  let current = null;
 
-  nodes.forEach(node => {
-    if (node.tagName === 'H2' && node.innerText.trim().toLowerCase() === 'faq') {
-      inFAQ = true;
-      node.remove();
-      return;
+  // 2. Parse FAQ block
+  for (let i = faqStartIndex + 1; i < children.length; i++) {
+    const el = children[i];
+
+    if (el.tagName === 'H2') break; // FAQ section ends
+
+    if (el.tagName === 'H3') {
+      current = { question: el.textContent.trim(), answer: '' };
+      faqs.push(current);
+      continue;
     }
 
-    if (inFAQ && node.tagName === 'H2') {
-      inFAQ = false;
+    if (current && el.tagName === 'P') {
+      current.answer += el.textContent.trim() + ' ';
     }
-
-    if (!inFAQ) return;
-
-    if (node.tagName === 'H3') {
-      currentQ = {
-        question: node.innerText.trim(),
-        answer: ''
-      };
-      faqs.push(currentQ);
-      node.remove();
-      return;
-    }
-
-    if (currentQ && node.tagName === 'P') {
-      currentQ.answer += node.innerText.trim() + ' ';
-      node.remove();
-    }
-  });
+  }
 
   if (!faqs.length) return;
 
+  // 3. Hide original FAQ content
+  for (let i = faqStartIndex; i < children.length; i++) {
+    if (i === faqStartIndex || children[i].tagName !== 'H2') {
+      children[i].style.display = 'none';
+    } else {
+      break;
+    }
+  }
+
+  // 4. Render accordion
   faqContainer.hidden = false;
 
-  faqs.forEach((faq, index) => {
+  faqs.forEach(faq => {
     const item = document.createElement('div');
     item.className = 'faq-item';
 
@@ -244,7 +249,7 @@
     faqContainer.appendChild(item);
   });
 
-  // Accordion behavior
+  // 5. Accordion behavior
   faqContainer.addEventListener('click', e => {
     const btn = e.target.closest('.faq-question');
     if (!btn) return;
@@ -253,10 +258,10 @@
     faqContainer.querySelectorAll('.faq-question')
       .forEach(q => q.setAttribute('aria-expanded', 'false'));
 
-    btn.setAttribute('aria-expanded', !expanded);
+    btn.setAttribute('aria-expanded', String(!expanded));
   });
 
-  // SEO: Inject FAQ schema
+  // 6. SEO: Inject FAQ schema
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -270,10 +275,10 @@
     }))
   };
 
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(schema);
-  document.body.appendChild(script);
+  const schemaScript = document.createElement('script');
+  schemaScript.type = 'application/ld+json';
+  schemaScript.textContent = JSON.stringify(schema);
+  document.head.appendChild(schemaScript);
 })();
 </script>
  
