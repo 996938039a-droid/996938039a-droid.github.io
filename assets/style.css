@@ -692,7 +692,7 @@ img {
 }
 
 .faq-question[aria-expanded="true"] + .faq-answer {
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .faq-answer p {
@@ -700,4 +700,3 @@ img {
   color: var(--muted);
   line-height: 1.7;
 }
-
