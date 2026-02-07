@@ -18,7 +18,7 @@ tldr: >
 ---
 
 
-### What Is the Amygdalan Crisis?
+## What Is the Amygdalan Crisis?
 
 The **amygdalan crisis** refers to a state of chronic emotional overstimulation caused by continuous exposure to high-intensity digital stimuli. In this condition, the brain’s threat-detection and emotional salience systems remain persistently activated, while rational control systems responsible for judgment, emotional regulation, and long-term planning progressively weaken.
 
@@ -26,7 +26,7 @@ This crisis is not accidental. It is the predictable neurological outcome of dig
 
 
 
-### A Brain Built for Savannas, Trapped in Infinite Feeds
+## A Brain Built for Savannas, Trapped in Infinite Feeds
 
 The human brain evolved in environments characterized by scarcity of stimuli, slow information flow, and immediate physical threats. In contrast, the contemporary digital environment delivers continuous, high-velocity emotional input—notifications, outrage cycles, algorithmic feeds, and symbolic threats—without physical resolution.
 
@@ -34,7 +34,7 @@ At the center of this evolutionary mismatch lies the **amygdala**, an almond-sha
 
 
 
-### The Neurology of Digital Overstimulation and the Amygdala Hijack
+## The Neurology of Digital Overstimulation and the Amygdala Hijack
 
 An **amygdala hijack** occurs when emotionally charged stimuli bypass the brain’s rational control centers and trigger an immediate limbic response. This happens through the brain’s “low road,” where sensory input flows directly from the thalamus to the amygdala before the prefrontal cortex has time to engage.
 
@@ -42,7 +42,7 @@ In acute danger, this shortcut saves lives. In digital environments, it manufact
 
 
 
-### Structural Brain Changes Caused by Chronic Emotional Stimulation
+## Structural Brain Changes Caused by Chronic Emotional Stimulation
 
 Sustained exposure to emotionally optimized digital stimuli produces measurable neurological changes:
 
@@ -56,7 +56,7 @@ The result is a nervous system tuned for threat detection in an environment desi
 
 
 
-### Limbic Capitalism: When Emotion Becomes Economic Infrastructure
+## Limbic Capitalism: When Emotion Becomes Economic Infrastructure
 
 **Limbic capitalism** is an economic system that extracts value by targeting emotional and reward circuits in the brain rather than rational decision-making processes. Unlike traditional market systems that assume informed choice, limbic capitalism optimizes for fear, desire, outrage, and anticipation.
 
@@ -64,7 +64,7 @@ Attention is no longer merely competed for—it is engineered.
 
 
 
-### How Digital Platforms Monetize Emotional Reactivity
+## How Digital Platforms Monetize Emotional Reactivity
 
 Digital platforms rely on **operant conditioning**, delivering intermittent rewards such as likes, notifications, and algorithmic unpredictability to sustain engagement. Crucially, dopamine release is stronger in anticipation than in reward receipt, mirroring the mechanics of slot machines.
 
@@ -76,7 +76,7 @@ What emerges is a form of **emotional governance**: behavior shaped continuously
 
 
 
-### The Philosophical Breakdown: Burnout and the Fragmented Self
+## The Philosophical Breakdown: Burnout and the Fragmented Self
 
 Philosopher Byung-Chul Han describes modern society as shifting from a disciplinary society to an achievement society—one in which individuals become entrepreneurs of themselves. The demand is no longer obedience, but constant performance.
 
@@ -86,7 +86,7 @@ In this environment, **deep boredom**—the mental state from which creativity a
 
 
 
-### The Statistical Toll: A Decline in Cognitive Capital
+## The Statistical Toll: A Decline in Cognitive Capital
 
 The amygdalan crisis is not anecdotal—it is measurable:
 
@@ -98,7 +98,7 @@ This represents not only a mental health crisis, but a macroeconomic erosion of 
 
 
 
-### Digital Temperance: Evidence-Based Pathways to Recovery
+## Digital Temperance: Evidence-Based Pathways to Recovery
 
 The solution is not technological abstinence, but **digital temperance**—the deliberate regulation of exposure, intensity, and emotional load.
 
@@ -114,14 +114,14 @@ The goal is not to silence the amygdala, but to return it to its rightful role: 
 
 
 
-### Conclusion: From Reactivity to Agency
+## Conclusion: From Reactivity to Agency
 
 The amygdalan crisis reveals a defining truth of the digital age: attention is no longer merely competed for—it is engineered. Surviving this era requires more than awareness. It demands structural boundaries, cultural restraint, and renewed respect for the limits of the human nervous system.
 
 Only then can the amygdala be restored from an exploited liability into what it was always meant to be: a guardian, not a master.
 
 
-## FAQs
+## FAQ
 
 ### What is digital overstimulation?
 Digital overstimulation refers to continuous exposure to high-intensity digital inputs such as notifications, infinite scrolling feeds, emotionally charged news, and algorithmically optimized content. This constant stimulation keeps the brain in a heightened state of alertness, reducing its ability to rest, reflect, and regulate emotions effectively.
