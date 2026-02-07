@@ -255,7 +255,7 @@ It is a physical one.
 *This is one of them.*
 
 
-##FAQ
+## FAQ
 
 ### What does “doubt collapses possibility” actually mean?
 It means that doubt functions like a form of mental measurement. When you doubt, you introduce specific information about failure into an otherwise open system of possible outcomes. This shifts the system from a flexible, probabilistic state into a fixed, classical one where fewer outcomes remain viable.
