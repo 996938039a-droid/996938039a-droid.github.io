@@ -1,24 +1,24 @@
 ---
 layout: post
-title: "Global Economy 2025: A Structural Inflection Point in Trade, Growth, and Power"
-description: "The global economy in 2025 is not collapsing but structurally rewiring. Slower growth, trade fragmentation, geopolitical risk, and a shift from hyper-globalization to a just-in-case model are reshaping global trade, supply chains, and capital flows."
+title: "Global Economy 2026: A Structural Inflection Point in Trade, Growth, and Power"
+description: "The global economy in 2026 is not collapsing but structurally rewiring. Slower growth, trade fragmentation, geopolitical risk, and a shift from hyper-globalization to a just-in-case model are reshaping global trade, supply chains, and capital flows."
 keywords:
-  - "global economy 2025"
+  - "global economy 2026"
   - "economic inflection point"
   - "global trade fragmentation"
   - "just-in-case supply chains"
   - "global economic outlook"
 banner: /assets/images/globalfinancialinflection.png
 tldr: >
-  The global economy in 2025 is not breaking—it is bending into a new shape.
+  The global economy in 2026 is not breaking—it is bending into a new shape.
   Growth has slowed, trade policy uncertainty has surged, and geopolitics now
   shapes supply chains. What is emerging is a just-in-case global economy that
   prioritizes resilience, redundancy, and security over pure efficiency.
 ---
 
-## Global Economy 2025: A Structural Inflection Point
+## Global Economy 2026: A Structural Inflection Point
 
-The global economy in 2025 stands at a critical **inflection point**.
+The global economy in 2026 stands at a critical **inflection point**.
 
 Growth has slowed to **2.6 percent**, trade policy uncertainty has surged to levels nearly **ten times higher** than the previous decade, and geopolitical risk has become a permanent structural feature of the global system. Yet the world economy has not collapsed.
 
