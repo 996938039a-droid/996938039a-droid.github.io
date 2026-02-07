@@ -94,43 +94,46 @@ This transition defines the **Affective Decade (2020–2030)**.
 
 ## Attention Economy vs Affective Economy
 
-<table>
+<div class="table-wrap">
+
+<table class="comparison-table">
   <thead>
     <tr>
-      <th>Dimension</th>
-      <th>Attention Economy</th>
-      <th>Affective Economy</th>
+      <th scope="col">Dimension</th>
+      <th scope="col">Attention Economy</th>
+      <th scope="col">Affective Economy</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>Core Asset</strong></td>
+      <th scope="row">Core Asset</th>
       <td>Time and focus</td>
       <td>Emotional response</td>
     </tr>
     <tr>
-      <td><strong>Optimization Metric</strong></td>
+      <th scope="row">Optimization Metric</th>
       <td>Clicks, views, duration</td>
       <td>Valence, arousal, resonance</td>
     </tr>
     <tr>
-      <td><strong>Measurement Tools</strong></td>
+      <th scope="row">Measurement Tools</th>
       <td>Web analytics</td>
       <td>Biometrics, emotion AI</td>
     </tr>
     <tr>
-      <td><strong>Growth Constraint</strong></td>
+      <th scope="row">Growth Constraint</th>
       <td>Biological ceiling</td>
       <td>Emotional intensity</td>
     </tr>
     <tr>
-      <td><strong>ROI Driver</strong></td>
+      <th scope="row">ROI Driver</th>
       <td>Visibility</td>
       <td>Meaning</td>
     </tr>
   </tbody>
 </table>
 
+</div>
 
 
 ## Why Emotion Drives Economic Value
