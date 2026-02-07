@@ -739,31 +739,39 @@ img {
 
 
 /* ===============================
-   HERO → BODY ATMOSPHERIC FADE
+   HERO → BODY SOFT TRANSITION (DEBUG)
 ================================ */
 
-/* Wrap the entire article area in a subtle gradient echo */
-.article {
+/* First element after hero */
+.article-meta {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+
+  /* DEBUG: outline to confirm element position */
+  outline: 2px solid red;
 }
 
-/* Soft background carry-over */
-.article::before {
-  content: "";
+/* Atmospheric fade starting under hero */
+.article-meta::before {
+  content: "DEBUG GRADIENT";
   position: absolute;
-  top: -180px;              /* overlaps hero bottom */
+  top: -200px;
   left: 0;
   right: 0;
-  height: 420px;
+  height: 300px;
 
-  background:
-    radial-gradient(
-      1200px 380px at 50% 0%,
-      rgba(255, 255, 255, 0.035),
-      rgba(11, 13, 16, 0.85) 60%,
-      rgba(11, 13, 16, 1) 100%
-    );
+  /* DEBUG: loud gradient */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0.6),
+    rgba(0, 255, 0, 0.6),
+    rgba(0, 0, 255, 0.6)
+  );
+
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
 
   pointer-events: none;
   z-index: -1;
