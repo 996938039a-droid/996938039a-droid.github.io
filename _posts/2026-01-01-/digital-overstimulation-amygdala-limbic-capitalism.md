@@ -1,4 +1,4 @@
----
+--- 
 layout: post
 title: "The Amygdalan Crisis: How Digital Overstimulation Hijacks the Brain and Fuels Limbic Capitalism"
 description: "An in-depth, research-backed exploration of how digital overstimulation chronically activates the amygdala, weakens rational control systems, and enables limbic capitalism—an economic regime built on fear, desire, and compulsive attention."
