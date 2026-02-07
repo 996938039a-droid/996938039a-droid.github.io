@@ -154,34 +154,65 @@ It is a **neurological survival strategy**.
 
 Human agency depends on it.
 
+--
+## FAQ
 
-faqs:
-  - question: "Is social media addiction a real medical condition?"
-    answer: "Social media addiction is considered a behavioral addiction rather than a substance addiction. While it is not formally classified as a standalone disorder in most diagnostic manuals, its neurological and behavioral characteristics closely resemble recognized conditions such as gambling disorder."
+### Is social media addiction a real medical condition?
 
-  - question: "How does social media affect dopamine in the brain?"
-    answer: "Social media triggers phasic dopamine release through unpredictable rewards such as likes, notifications, and algorithmic content, disrupting normal dopamine regulation and reinforcing compulsive engagement patterns."
+Social media addiction is classified as a **behavioral addiction**, not a substance addiction. While it is not formally listed as a standalone diagnosis in most medical manuals, its neurological and behavioral markers closely resemble recognized conditions such as gambling disorder. These include compulsive use, impaired impulse control, withdrawal-like symptoms, and measurable changes in reward circuitry.
 
-  - question: "Is social media more addictive than drugs?"
-    answer: "Social media does not introduce external chemicals into the body, but its variable reward structure, constant availability, and social reinforcement make it uniquely pervasive and difficult to disengage from compared to many substances."
+---
 
-  - question: "Why are teenagers and children more vulnerable to social media addiction?"
-    answer: "Children and adolescents are more vulnerable because the prefrontal cortex, which governs impulse control and long-term decision-making, is still developing, making them more susceptible to dopamine-driven compulsive behaviors."
+### How does social media affect dopamine in the brain?
 
-  - question: "What are the mental health effects of excessive social media use?"
-    answer: "Excessive social media use is associated with higher rates of depression, anxiety, loneliness, body dissatisfaction, sleep disruption, and increased suicide risk, particularly among adolescents and young adults."
+Social media triggers **phasic dopamine release**, producing sharp reward spikes in response to likes, notifications, and algorithmically curated content. Over time, this disrupts normal dopamine regulation, reducing baseline reward sensitivity and increasing compulsive reward-seeking behavior.
 
-  - question: "Can reducing social media use reverse brain changes?"
-    answer: "Due to neuroplasticity, reducing social media use and restoring offline reward sources can gradually normalize dopamine sensitivity and improve executive function, though recovery timelines vary."
+---
 
-  - question: "How much social media use is considered excessive?"
-    answer: "Research suggests that mental health outcomes deteriorate significantly beyond three hours of daily social media use, with risk increasing sharply as usage duration and compulsive patterns rise."
+### Is social media more addictive than drugs?
 
-  - question: "Are social media companies aware of the mental health impacts of their platforms?"
-    answer: "Internal research disclosures and whistleblower testimony indicate that major social media companies are aware of the mental health and behavioral risks associated with their platforms."
+Social media does not introduce external chemicals into the body, but its **variable reward structure, constant availability, and social reinforcement** make it uniquely difficult to disengage from. In terms of population reach and time spent, it is more pervasive than most substances, even if its biochemical mechanism differs.
 
-  - question: "What is the most effective way to reduce social media addiction?"
-    answer: "The most effective interventions introduce structural friction, such as disabling notifications, limiting device access, and reducing algorithmic exposure, rather than relying solely on willpower."
+---
 
-  - question: "Is a complete digital detox necessary to regain control?"
-    answer: "Complete abstinence is not required; intentional use supported by environmental and behavioral changes is more sustainable and effective for restoring attention and autonomy."
+### Why are teenagers and children more vulnerable to social media addiction?
+
+The **prefrontal cortex**, which governs impulse control and long-term decision-making, continues developing into the mid-20s. Exposure to high-frequency dopamine stimulation during this period increases susceptibility to compulsive behaviors and weakens executive regulation.
+
+---
+
+### What are the mental health effects of excessive social media use?
+
+High levels of social media use are associated with increased rates of **depression, anxiety, loneliness, body dissatisfaction, sleep disruption, and suicidal ideation**, particularly among adolescents and young adults. These effects intensify as daily usage exceeds several hours.
+
+---
+
+### Can reducing social media use reverse brain changes?
+
+Neuroplasticity allows the brain to recover over time. Reducing usage, introducing friction, and restoring offline reward sources can gradually normalize dopamine sensitivity and improve executive function, though recovery timelines vary by individual.
+
+---
+
+### How much social media use is considered excessive?
+
+Research indicates that mental health outcomes begin to deteriorate significantly beyond **three hours of daily use**, though individual sensitivity varies. The risk increases sharply with higher duration and compulsive engagement patterns.
+
+---
+
+### Are social media companies aware of these effects?
+
+Internal research disclosures and whistleblower testimony indicate that major platforms are aware of the mental health impacts associated with their products. Despite this knowledge, engagement-optimized design choices have largely remained unchanged.
+
+---
+
+### What is the most effective way to reduce social media addiction?
+
+The most effective interventions introduce **structural friction**—disabling notifications, removing devices from sleeping spaces, setting time limits, and reducing algorithmic exposure—rather than relying solely on willpower.
+
+---
+
+### Is complete digital detox necessary?
+
+No. The goal is not abstinence but **intentional use**. Sustainable change comes from reshaping digital environments to support attention, autonomy, and long-term well-being rather than constant stimulation.
+
+---
