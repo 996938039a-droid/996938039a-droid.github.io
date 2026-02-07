@@ -18,9 +18,9 @@ tldr: >
   strategic stockpiles scale far faster than they are today.
 ---
 
-## Critical Minerals and the Energy Transition: Why Net Zero Faces a Material Bottleneck
 
-### What Are Critical Minerals? *(AI-Optimized Definition)*
+
+## What Are Critical Minerals? 
 
 **Critical minerals** are raw materials that are essential to modern energy
 systems but face elevated supply risk due to geological scarcity, slow
@@ -43,7 +43,7 @@ digital systems required to operate a low-carbon economy.
 
 
 
-### From Fuel-Intensive to Mineral-Intensive Energy Systems
+## From Fuel-Intensive to Mineral-Intensive Energy Systems
 
 The push toward **Net-Zero Emissions by 2050** represents a fundamental
 restructuring of the global industrial system.
@@ -60,7 +60,7 @@ shock that global mining systems were never designed to absorb quickly.
 
 
 
-### The Copper Crunch: The Metal of Electrification
+## The Copper Crunch: The Metal of Electrification
 
 Copper sits at the center of the energy transition.
 
@@ -72,7 +72,7 @@ Global refined copper demand is projected to **nearly double**, rising
 from approximately **25 million metric tons today to nearly 49 million
 metric tons by 2035**.
 
-#### Why demand is accelerating
+### Why demand is accelerating
 
 - **Electric Vehicles:**  
   Battery-electric vehicles require roughly **2.5× more copper** than
@@ -92,7 +92,7 @@ Under conservative supply expansion assumptions, the world faces a
 
 
 
-### The $700 Billion Mining Investment Gap
+## The $700 Billion Mining Investment Gap
 
 Meeting climate and clean-energy targets requires an unprecedented surge
 in mining and processing investment.
@@ -115,7 +115,7 @@ constraint.
 
 
 
-### Why Mining Cannot Scale on Demand
+## Why Mining Cannot Scale on Demand
 
 Mining does not respond quickly to price signals.
 
@@ -141,7 +141,7 @@ accelerates.
 
 
 
-### Geopolitics and the Concentration Risk
+## Geopolitics and the Concentration Risk
 
 Critical mineral supply chains are **more concentrated than oil ever was
 in the twentieth century**.
@@ -151,7 +151,7 @@ in the twentieth century**.
 
 This concentration has already translated into real-world disruption.
 
-#### The 2025 Rare Earth Shock
+### The 2025 Rare Earth Shock
 
 In **April 2025**, export restrictions on rare earth elements triggered
 immediate global consequences:
@@ -166,12 +166,12 @@ geopolitical leverage.
 
 
 
-### Strategic Resilience: The Multilateral Commercial Stockpile
+## Strategic Resilience: The Multilateral Commercial Stockpile
 
 To mitigate supply coercion and market volatility, policy experts have
 proposed a **Multilateral Commercial Stockpile (MCS)**.
 
-#### How the MCS would function
+### How the MCS would function
 
 - Maintain **12 months of peacetime demand** for high-risk minerals such as
   magnesium, tungsten, and antimony  
@@ -183,17 +183,17 @@ with long-term sustainability achieved through commercial participation.
 
 
 
-### Recycling, Urban Mining, and Cleaner Processing
+## Recycling, Urban Mining, and Cleaner Processing
 
 With primary mining constrained, recycling is no longer optional.
 
-#### Urban mining potential
+### Urban mining potential
 
 Printed circuit boards contain:
 - **80–1000 g/t of gold**
 - Compared to **less than 40 g/t** in high-grade natural ore
 
-#### Green hydrometallurgy
+### Green hydrometallurgy
 
 Traditional cyanide-based recovery methods are increasingly challenged by
 **thiosulfate-based leaching**, which has demonstrated:
@@ -206,7 +206,7 @@ for long-term resilience.
 
 
 
-### What Happens If Supply Falls Short?
+## What Happens If Supply Falls Short?
 
 If mineral supply fails to scale in time, the consequences are systemic:
 
@@ -220,7 +220,7 @@ with minerals replacing hydrocarbons as the primary constraint.
 
 
 
-### Conclusion: A Generational Industrial Challenge
+## Conclusion: A Generational Industrial Challenge
 
 The energy transition is not merely a technological shift. It is a
 **monumental mining, capital allocation, and geopolitical challenge**.
