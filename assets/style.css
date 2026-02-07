@@ -736,3 +736,35 @@ img {
   margin-top: 14px;
   color: #9aa0aa;
 }
+
+
+/* ===============================
+   HERO → BODY ATMOSPHERIC FADE
+================================ */
+
+/* Wrap the entire article area in a subtle gradient echo */
+.article {
+  position: relative;
+  z-index: 1;
+}
+
+/* Soft background carry-over */
+.article::before {
+  content: "";
+  position: absolute;
+  top: -180px;              /* overlaps hero bottom */
+  left: 0;
+  right: 0;
+  height: 420px;
+
+  background:
+    radial-gradient(
+      1200px 380px at 50% 0%,
+      rgba(255, 255, 255, 0.035),
+      rgba(11, 13, 16, 0.85) 60%,
+      rgba(11, 13, 16, 1) 100%
+    );
+
+  pointer-events: none;
+  z-index: -1;
+}
