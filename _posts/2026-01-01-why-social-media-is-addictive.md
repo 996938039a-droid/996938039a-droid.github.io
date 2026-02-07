@@ -143,7 +143,6 @@ Disabling push notifications, removing phones from bedrooms, and introducing del
 ### The Deactivation Cost
 Users would require an average payment of **$38.83 per month** to deactivate social media accounts, revealing the depth of psychological and economic entanglement.
 
----
 
 ## Closing Signal
 
@@ -154,7 +153,7 @@ It is a **neurological survival strategy**.
 
 Human agency depends on it.
 
---
+---
 ## FAQ
 
 ### Is social media addiction a real medical condition?
