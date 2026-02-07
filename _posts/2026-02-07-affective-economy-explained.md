@@ -24,7 +24,7 @@ The **affective economy** is an emerging economic system in which **human emotio
 
 This transition marks a structural evolution away from the **attention economy** that dominated digital markets from roughly 2010 to 2020.
 
----
+
 
 ## What Was the Attention Economy?
 
@@ -37,7 +37,7 @@ For nearly two decades, this model governed:
 - Platform design
 - Advertising capital allocation
 
----
+
 
 ## The Scale of the Attention Economy
 
@@ -53,7 +53,7 @@ By 2025:
 Digital platforms now command **72.7% of global advertising investment**, a permanent restructuring of capital accelerated by the COVID-19 pandemic  
 [DataReportal – Global Advertising Trends 2025](https://datareportal.com/reports/digital-2025-sub-section-global-advertising-trends).
 
----
+
 
 ## Why the Attention Economy Hit a Biological Limit
 
@@ -75,7 +75,7 @@ This data reveals **Peak Attention**:
 - Marginal returns on impressions are collapsing
 - Growth can only come from **higher-value attention**
 
----
+
 
 ## What Is the Affective Economy?
 
@@ -90,19 +90,48 @@ In this model:
 
 This transition defines the **Affective Decade (2020–2030)**.
 
----
+
 
 ## Attention Economy vs Affective Economy
 
-| Dimension | Attention Economy | Affective Economy |
-|---------|------------------|------------------|
-| Core Asset | Time and focus | Emotional response |
-| Optimization Metric | Clicks, views, duration | Valence, arousal, resonance |
-| Measurement Tools | Web analytics | Biometrics, emotion AI |
-| Growth Constraint | Biological ceiling | Emotional intensity |
-| ROI Driver | Visibility | Meaning |
+<table>
+  <thead>
+    <tr>
+      <th>Dimension</th>
+      <th>Attention Economy</th>
+      <th>Affective Economy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Core Asset</strong></td>
+      <td>Time and focus</td>
+      <td>Emotional response</td>
+    </tr>
+    <tr>
+      <td><strong>Optimization Metric</strong></td>
+      <td>Clicks, views, duration</td>
+      <td>Valence, arousal, resonance</td>
+    </tr>
+    <tr>
+      <td><strong>Measurement Tools</strong></td>
+      <td>Web analytics</td>
+      <td>Biometrics, emotion AI</td>
+    </tr>
+    <tr>
+      <td><strong>Growth Constraint</strong></td>
+      <td>Biological ceiling</td>
+      <td>Emotional intensity</td>
+    </tr>
+    <tr>
+      <td><strong>ROI Driver</strong></td>
+      <td>Visibility</td>
+      <td>Meaning</td>
+    </tr>
+  </tbody>
+</table>
 
----
+
 
 ## Why Emotion Drives Economic Value
 
@@ -115,7 +144,7 @@ Research shows:
 
 Attention alone does not create value unless it triggers an emotional response.
 
----
+
 
 ## Emotion ROI: Quantifying Resonance
 
@@ -128,7 +157,7 @@ The performance gap between emotional and rational persuasion is well establishe
 - High emotional engagement increases brand loyalty to **82%**, compared to **38%** for low engagement  
 [Amra & Elma – Emotional Marketing Statistics](https://www.amraandelma.com/emotional-marketing-statistics/)
 
----
+
 
 ## How Emotion Is Measured: Affective Computing Explained
 
@@ -155,14 +184,14 @@ Maps fixation paths and visual blind spots
 Studies using **30–50 participants** can outperform surveys of thousands due to lower variance  
 [Jasmine Directory – Neuromarketing Biometrics](https://www.jasminedirectory.com/blog/neuromarketing-using-biometrics-to-test-ad-effectiveness/).
 
----
+
 
 ## Case Study: Frito-Lay and Emotional Design
 
 Neuromarketing analysis revealed that **shiny packaging triggered guilt responses** in female consumers. Switching to **matte packaging with natural imagery** aligned visual cues with positive affect and increased sales  
 [Jasmine Directory – Neuromarketing Case Study](https://www.jasminedirectory.com/blog/neuromarketing-using-biometrics-to-test-ad-effectiveness/).
 
----
+
 
 ## The Creator Economy: Decentralized Affective Labor
 
@@ -180,7 +209,7 @@ There are **245–275 million creators globally**, with ~4% of social users acti
 - **50% of consumers** prefer buying from creators they trust emotionally  
 [Hopp – Creator Economy Statistics](https://www.hopp.co/post/creator-economy-statistics)
 
----
+
 
 ## Capital Flows: Why Investors Are Funding Affect
 
@@ -198,7 +227,7 @@ Broader emotion analytics forecasts:
 - CAGR: **31.21%**  
 [OpenPR – Affective Computing Market](https://www.openpr.com/news/4305132/affective-computing-market-is-reaching-at-a-cagr-of-31-21-during)
 
----
+
 
 ## Regulation and the Cost of Emotion Data
 
@@ -220,7 +249,7 @@ BIPA settlements:
 - Google: **$100M**  
 [Commercial Litigation Update – Biometric Lawsuits](https://www.commerciallitigationupdate.com/biometric-backlash-the-rising-wave-of-litigation-under-bipa-and-beyond)
 
----
+
 
 ## Platforms Already Operating in the Affective Economy
 
@@ -230,7 +259,7 @@ BIPA settlements:
 - **17+ seconds** active attention span (380% higher than social media)  
 [Spotify Ads – Attention on Spotify](https://ads.spotify.com/en-IN/news-and-insights/attention-on-spotify/)
 
----
+
 
 ## Conclusion: The ROI of the Affective Decade
 
@@ -249,22 +278,22 @@ In the affective decade, advantage belongs not to those who are merely seen—bu
 ### What is the affective economy?
 The **affective economy** is an economic system in which **human emotions become the primary unit of value creation**, replacing attention as the dominant digital currency. In this model, platforms and brands focus on measuring emotional responses—such as trust, excitement, or resonance—rather than just clicks, views, or time spent.
 
----
+
 
 ### How is the affective economy different from the attention economy?
 The attention economy optimizes for **visibility and time**, while the affective economy optimizes for **emotional impact**. Attention is about being seen; affect is about being felt. As global screen time plateaus, emotional resonance delivers higher ROI than additional impressions.
 
----
+
 
 ### Why has human attention reached its limit?
 Human attention is biologically constrained. Global screen time now averages nearly seven hours per day, representing a significant portion of waking life. Because this total cannot grow indefinitely, digital systems can no longer rely on expanding attention supply to drive growth.
 
----
+
 
 ### What is affective computing?
 **Affective computing** refers to AI systems that can **detect, interpret, and respond to human emotions** using physiological and behavioral signals such as facial expressions, voice tone, brain activity, and biometric responses.
 
----
+
 
 ### How does emotion AI measure human feelings?
 Emotion AI uses multiple modalities, including:
@@ -274,60 +303,60 @@ Emotion AI uses multiple modalities, including:
 - Eye-tracking and fixation analysis  
 These signals provide real-time insight into subconscious emotional responses.
 
----
+
 
 ### Why does emotional marketing outperform rational marketing?
 Most purchasing decisions are subconscious and emotionally driven. Emotional marketing aligns with how the human brain processes information, resulting in higher engagement, stronger brand recall, and significantly improved conversion and loyalty rates compared to rational-only messaging.
 
----
+
 
 ### What is “emotion ROI”?
 **Emotion ROI** measures the economic return generated by emotional engagement rather than mere exposure. It captures how emotional resonance increases conversion rates, brand loyalty, pricing power, and long-term customer value.
 
----
+
 
 ### How is the creator economy related to the affective economy?
 The creator economy professionalizes emotional labor. Creators build trust-based relationships with audiences, monetizing familiarity and emotional continuity rather than scale alone. This makes creators early and highly effective participants in the affective economy.
 
----
+
 
 ### What role does AI play in the affective economy?
 AI provides the infrastructure to quantify emotion at scale. Machine learning models process biometric and behavioral data to infer emotional states, enabling personalization, emotional targeting, and adaptive content delivery.
 
----
+
 
 ### Are there ethical concerns with emotion AI?
 Yes. Emotional data is highly sensitive and invasive. Concerns include privacy violations, manipulation, consent, and psychological harm. As a result, emotion AI faces stricter regulatory scrutiny than traditional analytics.
 
----
+
 
 ### How does regulation impact the affective economy?
 Regulations such as the EU Artificial Intelligence Act and biometric privacy laws in the United States restrict how emotional data can be collected and used. Compliance costs are high, and non-compliance carries significant legal risk, shaping which companies can operate at scale.
 
----
+
 
 ### Which industries are most affected by the affective economy?
 Industries with high emotional engagement—including advertising, media, entertainment, gaming, creator platforms, and consumer brands—are most impacted. Healthcare, education, and finance are emerging sectors but face heavier regulation.
 
----
+
 
 ### Is the affective economy already here?
 Yes. Platforms like Spotify, creator-led brands, and emotion-driven marketing campaigns already operate on affective principles. The shift is underway, and the next decade will accelerate its adoption.
 
----
+
 
 ### What skills will matter most in the affective decade?
 Skills at the intersection of psychology, data science, AI, and ethics will be critical. Understanding human emotion, behavioral science, and responsible AI deployment will define competitive advantage.
 
----
+
 
 ### Can small businesses participate in the affective economy?
 Yes, but selectively. While advanced biometric tools may be costly, small businesses can leverage emotional storytelling, community-building, creator partnerships, and trust-based engagement to compete effectively.
 
----
+
 
 ### What is the long-term risk of the affective economy?
 The primary risk is overreach—using emotion as a manipulable asset rather than a human boundary. Without ethical safeguards, the affective economy could erode trust, invite regulation, and trigger consumer backlash.
 
----
+
 
