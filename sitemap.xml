@@ -10,7 +10,7 @@ layout: null
   </url>
 
   <url>
-    <loc>https://signalsandpatterns.com/blogs/</loc>
+    <loc>https://signalsandpatterns.com/blog/</loc>
   </url>
 
   {% for post in site.posts %}
