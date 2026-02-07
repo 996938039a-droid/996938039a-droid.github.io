@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/assets/style.css" />
 
-  <!-- SEO: Canonical & Indexing -->
   {% if page.canonical %}
     <link rel="canonical" href="{{ page.canonical }}">
   {% else %}
@@ -20,190 +19,75 @@
     <meta name="robots" content="index, follow">
   {% endif %}
 
-  
-  <!-- Utilities -->
   <script src="/assets/reading-time.js"></script>
   <script src="/assets/likes.js"></script>
 </head>
 
 <body>
 
-  <!-- Section Progress (Dots) -->
-  <div class="section-progress" id="sectionProgress"></div>
+<!-- SECTION PROGRESS -->
+<div class="section-progress" id="sectionProgress"></div>
 
-  <!-- ARTICLE HERO -->
-  <section class="hero-banner">
-    <img
-      src="{{ page.banner }}"
-      alt="{{ page.title }}"
-      class="hero-bg"
-    />
-    <div class="hero-overlay">
-      <h1>{{ page.title }}</h1>
-    </div>
-  </section>
-
-  <!-- META -->
-  <div class="article-meta">
-    <span id="readingTime"></span>
-    ·
-    <button class="like-btn" data-slug="{{ page.url }}"></button>
+<!-- HERO -->
+<section class="hero-banner">
+  <img src="{{ page.banner }}" alt="{{ page.title }}" class="hero-bg" />
+  <div class="hero-overlay">
+    <h1>{{ page.title }}</h1>
   </div>
-
-  <!-- ARTICLE CONTENT -->
-  <article class="article">
-
-    {% if page.tldr %}
-      <section class="tldr">
-        <strong>TL;DR</strong>
-        <p>{{ page.tldr }}</p>
-      </section>
-    {% endif %}
-
-    <section class="article-body">
-      {{ content }}
-    </section>
-
-<section class="article-faqs" id="articleFaqs" hidden>
-  <h2>Frequently Asked Questions</h2>
 </section>
 
-    
-    <section class="article-footer">
-      <a href="/blogs/" class="read-link">← Back to all articles</a>
-    </section>
+<!-- META -->
+<div class="article-meta">
+  <span id="readingTime"></span>
+  ·
+  <button class="like-btn" data-slug="{{ page.url }}"></button>
+</div>
 
-  </article>
+<article class="article">
 
-  <!-- 1. AUTO-CREATE SECTION CARDS (FROM H2) -->
-  <script>
-  (function () {
-    const body = document.querySelector('.article-body');
-    if (!body) return;
+  {% if page.tldr %}
+  <section class="tldr">
+    <strong>TL;DR</strong>
+    <p>{{ page.tldr }}</p>
+  </section>
+  {% endif %}
 
-    let currentCard = null;
-    const children = Array.from(body.children);
+  <section class="article-body">
+    {{ content }}
+  </section>
 
-    children.forEach(node => {
-      if (node.tagName === 'H2') {
-        currentCard = document.createElement('section');
-        currentCard.className = 'article-card';
-        node.before(currentCard);
-      }
-      if (currentCard) currentCard.appendChild(node);
-    });
-  })();
-  </script>
+  <!-- FAQ TARGET -->
+  <section id="articleFaqs"></section>
 
-  <!-- 2. REVEAL ANIMATION FOR CARDS -->
-  <script>
-  (function () {
-    const cards = document.querySelectorAll('.article-card');
-    if (!cards.length) return;
+  <section class="article-footer">
+    <a href="/blogs/" class="read-link">← Back to all articles</a>
+  </section>
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
+</article>
 
-    cards.forEach(card => observer.observe(card));
-  })();
-  </script>
-
-  <!-- 3. SECTION PROGRESS DOTS -->
-  <script>
-  (function () {
-    window.addEventListener('load', () => {
-      const sections = document.querySelectorAll('.article-card');
-      const progress = document.getElementById('sectionProgress');
-      if (!sections.length || !progress) return;
-
-      progress.innerHTML = '';
-
-      sections.forEach(() => {
-        const dot = document.createElement('div');
-        dot.className = 'section-progress-dot';
-        progress.appendChild(dot);
-      });
-
-      const dots = progress.querySelectorAll('.section-progress-dot');
-
-      const observer = new IntersectionObserver(
-        entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const index = Array.from(sections).indexOf(entry.target);
-              dots.forEach((dot, i) =>
-                dot.classList.toggle('active', i <= index)
-              );
-            }
-          });
-        },
-        { threshold: 0.4 }
-      );
-
-      sections.forEach(section => observer.observe(section));
-    });
-  })();
-  </script>
-
-  <!-- 4. KEY SENTENCE PULL-OUTS (SUBTLE) -->
-  <script>
-  (function () {
-    const paragraphs = document.querySelectorAll('.article-body p');
-    paragraphs.forEach(p => {
-      const text = p.innerText.trim();
-      if (
-        text.length > 90 &&
-        text.length < 220 &&
-        !text.includes('?') &&
-        !p.querySelector('a')
-      ) {
-        p.classList.add('key-sentence');
-      }
-    });
-  })();
-  </script>
-
-  <!-- 5. READING TIME -->
-  <script>
-  (function () {
-    const body = document.querySelector('.article-body');
-    if (!body) return;
-
-    const minutes = calculateReadingTime(body.innerText);
-    document.getElementById('readingTime').innerText =
-      `${minutes} min read`;
-  })();
-  </script>
-
-
+<!-- ========================= -->
+<!-- FAQ EXTRACTION (MUST RUN FIRST) -->
+<!-- ========================= -->
 <script>
 (function () {
-  const article = document.querySelector('.article-body');
-  if (!article) return;
+  const body = document.querySelector('.article-body');
+  const faqMount = document.getElementById('articleFaqs');
+  if (!body || !faqMount) return;
 
-  const nodes = Array.from(article.children);
-  const faqIndex = nodes.findIndex(
-    el => el.tagName === 'H2' && el.innerText.trim().toLowerCase() === 'faq'
+  const nodes = Array.from(body.children);
+  const faqStart = nodes.findIndex(
+    n => n.tagName === 'H2' && n.textContent.trim().toLowerCase() === 'faq'
   );
-
-  if (faqIndex === -1) return;
+  if (faqStart === -1) return;
 
   const faqs = [];
-  let i = faqIndex + 1;
+  let i = faqStart + 1;
 
   while (i < nodes.length && nodes[i].tagName !== 'H2') {
     if (nodes[i].tagName === 'H3' && nodes[i + 1]?.tagName === 'P') {
       faqs.push({
-        question: nodes[i].innerText.trim(),
-        answer: nodes[i + 1].innerText.trim()
+        q: nodes[i].innerText.trim(),
+        a: nodes[i + 1].innerText.trim()
       });
       i += 2;
     } else {
@@ -211,65 +95,125 @@
     }
   }
 
-  // Remove original FAQ content
-  for (let j = faqIndex; j < i; j++) {
-    nodes[j].remove();
-  }
+  for (let j = faqStart; j < i; j++) nodes[j].remove();
+  if (!faqs.length) return;
 
-  // Build accordion
-  const faqSection = document.createElement('section');
-  faqSection.className = 'faq-section';
-
-  faqSection.innerHTML = `
-    <h2 class="faq-title">FAQ</h2>
-    <div class="faq-list">
-      ${faqs.map((faq, idx) => `
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            ${faq.question}
-          </button>
-          <div class="faq-answer">
-            <p>${faq.answer}</p>
-          </div>
-        </div>
-      `).join('')}
-    </div>
+  faqMount.className = 'faq-container';
+  faqMount.innerHTML = `
+    <h2>FAQ</h2>
+    ${faqs.map(f => `
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">${f.q}</button>
+        <div class="faq-answer"><p>${f.a}</p></div>
+      </div>
+    `).join('')}
   `;
 
-  article.appendChild(faqSection);
-
-  // Accordion behavior
-  faqSection.querySelectorAll('.faq-question').forEach(btn => {
+  faqMount.querySelectorAll('.faq-question').forEach(btn => {
     btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !open);
       btn.nextElementSibling.style.maxHeight =
-        expanded ? null : btn.nextElementSibling.scrollHeight + 'px';
+        open ? null : btn.nextElementSibling.scrollHeight + 'px';
     });
   });
 
-  // Inject FAQ schema
   const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "mainEntity": faqs.map(f => ({
       "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
     }))
   };
 
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(schema);
-  document.head.appendChild(script);
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(schema);
+  document.head.appendChild(s);
 })();
 </script>
 
+<!-- ========================= -->
+<!-- SECTION CARD CREATION -->
+<!-- ========================= -->
+<script>
+(function () {
+  const body = document.querySelector('.article-body');
+  if (!body) return;
 
+  let card = null;
+  Array.from(body.children).forEach(node => {
+    if (node.tagName === 'H2') {
+      card = document.createElement('section');
+      card.className = 'article-card';
+      node.before(card);
+    }
+    if (card) card.appendChild(node);
+  });
+})();
+</script>
+
+<!-- CARD ANIMATIONS -->
+<script>
+(function () {
+  const cards = document.querySelectorAll('.article-card');
+  const io = new IntersectionObserver(
+    entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('is-visible')),
+    { threshold: 0.15 }
+  );
+  cards.forEach(c => io.observe(c));
+})();
+</script>
+
+<!-- PROGRESS DOTS -->
+<script>
+window.addEventListener('load', () => {
+  const cards = document.querySelectorAll('.article-card');
+  const progress = document.getElementById('sectionProgress');
+  if (!cards.length || !progress) return;
+
+  progress.innerHTML = '';
+  cards.forEach(() => progress.appendChild(document.createElement('div')).className = 'section-progress-dot');
+  const dots = progress.children;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const i = [...cards].indexOf(e.target);
+        [...dots].forEach((d, j) => d.classList.toggle('active', j <= i));
+      }
+    });
+  }, { threshold: 0.4 });
+
+  cards.forEach(c => io.observe(c));
+});
+</script>
+
+<!-- KEY SENTENCES -->
+<script>
+(function () {
+  document.querySelectorAll('.article-body p').forEach(p => {
+    const t = p.innerText.trim();
+    if (t.length > 90 && t.length < 220 && !t.includes('?')) {
+      p.classList.add('key-sentence');
+    }
+  });
+})();
+</script>
+
+<!-- READING TIME -->
+<script>
+(function () {
+  const body = document.querySelector('.article-body');
+  if (!body) return;
+  document.getElementById('readingTime').innerText =
+    `${calculateReadingTime(body.innerText)} min read`;
+})();
+</script>
+
+<!-- BLOG SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -279,12 +223,6 @@
   "image": "{{ site.url }}{{ page.banner }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Person",
-    "name": "{% if page.author %}{{ page.author.name }}{% else %}Signals & Patterns{% endif %}",
-    "url": "{% if page.author %}{{ page.author.url }}{% else %}{{ site.url }}{% endif %}",
-    "image": "{% if page.author %}{{ page.author.image }}{% endif %}"
-  },
   "publisher": {
     "@type": "Organization",
     "name": "Signals & Patterns",
@@ -295,10 +233,10 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{{ page.url }}{% endif %}"
+    "@id": "{{ site.url }}{{ page.url }}"
   }
 }
+</script>
 
-  
 </body>
 </html>
