@@ -16,8 +16,6 @@ Growth has slowed to **2.6 per cent**, trade policy uncertainty has surged to le
 
 The era of frictionless hyper-globalization is ending. In its place, a world of redundancy, regionalization, and strategic buffers is emerging.
 
----
-
 ## The Illusion of Resilience
 
 At first glance, global trade in early 2025 appeared surprisingly resilient.
@@ -28,7 +26,6 @@ A significant share of the growth was driven by **frontloading**—firms and con
 
 As tariff measures begin to bite and frontloading fades, trade momentum is expected to **slow sharply into 2026**. What looked like resilience was, in reality, a temporary pull-forward of demand.
 
----
 
 ## From Hyper-Globalization to “Just-in-Case”
 
@@ -38,7 +35,6 @@ Global supply chains are being redesigned around **geopolitical risk**, not just
 
 This transition marks a move toward a **“just-in-case” trade model**, where excess capacity and regional diversification are no longer inefficiencies but strategic assets.
 
----
 
 ## ASEAN: The New Supply-Chain Anchor
 
@@ -59,7 +55,6 @@ Greenfield investment in digital infrastructure **more than doubled to $16 billi
 
 ASEAN is no longer peripheral to global trade—it is becoming one of its central organizing hubs.
 
----
 
 ## The Great Reallocation Between Superpowers
 
@@ -76,7 +71,6 @@ So-called **connector states** such as **Mexico, Viet Nam, and the United Arab E
 
 Mexico’s rise is emblematic: it has now surpassed China as the **largest source of U.S. imports**, accounting for **15.7 per cent** of total trade.
 
----
 
 ## The Hidden Material Cost of the Digital Economy
 
@@ -95,7 +89,6 @@ The energy and water implications are equally stark:
 
 The digital transition is not dematerializing the economy—it is **re-materializing it in new ways**.
 
----
 
 ## The Dollar: Dominant but Gradually Eroding
 
@@ -109,7 +102,6 @@ By the end of 2024:
 
 Diversification is happening—not abruptly, but persistently.
 
----
 
 ## The Case for Re-Globalization
 
@@ -123,7 +115,6 @@ Key challenges remain:
 
 True resilience will not emerge from unilateral protectionism, but from **networked multilateralism**, coordinated investment, and the development of a **circular digital economy**.
 
----
 
 ## Conclusion
 
