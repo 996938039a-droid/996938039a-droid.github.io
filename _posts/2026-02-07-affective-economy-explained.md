@@ -17,9 +17,7 @@ tldr: >
   Human attention has reached a biological ceiling. As screen time saturates globally, economic value is shifting away from capturing attention toward quantifying emotional response. This article presents a data-driven, first-principles analysis of the rise of the affective economy—where emotion, not visibility, becomes the dominant unit of digital value.
 ---
 
-## The Affective Economy Explained: Quantifying the Transition from Attention to Emotion
-
-### Canonical Definition (Featured Snippet + AI Overview Ready)
+## The Affective Economy Explained
 
 The **affective economy** is an emerging economic system in which **human emotion—rather than attention—becomes the primary unit of value creation, optimization, and monetization in digital markets**. As global screen time plateaus and cognitive saturation increases, brands, platforms, and AI systems are transitioning from capturing focus to **measuring, predicting, and engineering emotional response (affect)**.
 
@@ -545,10 +543,10 @@ The attention economy (2010–2020) was about **being seen**.
 The affective economy (2020–2030) is about **being felt**.
 
 The quantitative evidence is unambiguous:
-- 1. Global screen time has plateaued  
-- 2. Emotional engagement delivers 2× profit efficiency  
-- 3. Affective computing is growing at >30% CAGR  
-- 4. AI capital now exceeds 50% of global VC flows  
+- Global screen time has plateaued  
+- Emotional engagement delivers 2× profit efficiency  
+- Affective computing is growing at >30% CAGR  
+- AI capital now exceeds 50% of global VC flows  
 
 The future of digital value creation belongs to those who can **quantify the unquantifiable**—human emotion—without destroying trust.
 
