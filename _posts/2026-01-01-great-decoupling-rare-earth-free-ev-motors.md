@@ -132,18 +132,18 @@ The Auto Holy Grail has changed.
 
 It is no longer the most powerful motor—it is the most **sovereign, scalable, and resilient** one.
 
-
+---
 
 ## FAQ
 
 **Do EVs need rare earth magnets?**  
 No. Many EV motors operate without rare earth magnets using electrical excitation, induction, or ferrite-based designs.
-
+---
 **Are rare earth free EV motors less efficient?**  
 Modern designs can achieve efficiency comparable to permanent magnet motors, while offering greater supply-chain resilience.
-
+---
 **Why is China dominant in rare earth processing?**  
 China invested early and heavily in refining infrastructure, creating dominance in processing rather than raw reserves.
-
+---
 **Is India moving toward rare earth free EV motors?**  
 Yes. India is investing in ferrite-based motor designs, domestic processing capacity, and alternative motor architectures to reduce import dependence.
