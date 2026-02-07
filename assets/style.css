@@ -650,3 +650,54 @@ img {
     word-break: break-word;
   }
 }
+
+/* ===============================
+   FAQ ACCORDION
+================================ */
+
+.article-faqs {
+  margin-top: 96px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.faq-question::after {
+  content: "+";
+  float: right;
+  opacity: 0.6;
+}
+
+.faq-question[aria-expanded="true"]::after {
+  content: "–";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+  max-height: 500px;
+}
+
+.faq-answer p {
+  margin-top: 16px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
