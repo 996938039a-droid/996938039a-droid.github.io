@@ -766,3 +766,22 @@ img {
 .comparison-table tbody th {
   font-weight: 600;
 }
+
+
+/* === TABLE BORDERS & LINES === */
+.comparison-table {
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.comparison-table thead th {
+  background: rgba(255,255,255,0.04);
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
