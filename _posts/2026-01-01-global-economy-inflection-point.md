@@ -187,7 +187,7 @@ Growth is slower, trade is more fragmented, and uncertainty is structurally high
 Understanding this transition—separating temporary noise from enduring structural change—is the defining analytical challenge of the decade ahead.
 
 
-## Frequently Asked Questions (FAQs)
+## FAQ
 
 ### What does it mean when the global economy reaches an inflection point?
 An economic inflection point refers to a structural shift where the long-term drivers of growth, trade, and capital flows change direction. In 2025, this inflection point reflects a move away from hyper-globalization toward a more fragmented, resilience-focused global economic model shaped by geopolitics and trade policy uncertainty.
