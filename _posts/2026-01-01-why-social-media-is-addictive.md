@@ -14,6 +14,12 @@ tldr: >
   behavioral addiction infrastructure in human history, hijacking dopamine
   pathways, degrading executive function, and reshaping global neurobiology—
   particularly among the young—at a scale faster than human evolution can adapt.
+
+author:
+  name: Dipak Tiwari
+  url: https://www.linkedin.com/in/dipak-tiwari-iimvizag/
+  image: https://signalsandpatterns.com/assets/images/author.png
+
 ---
 
 # Why Social Media Is Addictive: The Neuroscience of Dopamine and Digital Narcoticism
