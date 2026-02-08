@@ -81,7 +81,7 @@ As a result, the system can be positioned not as a medical or biotechnological d
 
 
 
-# Part II - Product Design Architecture and Physical Realization  
+## Part II - Product Design Architecture and Physical Realization  
 *Translating Biological Constraints into a Manufacturable Indoor Device*
 
 ## 9. From Biological System to Consumer Object: Design Translation Principles
@@ -164,7 +164,7 @@ In all cases, the system defaults to a passive state. There is no scenario in wh
 
 
 
-# Part III : Instrumentation, Sensing, and Control Logic  
+## Part III : Instrumentation, Sensing, and Control Logic  
 *Zone-Wise Interpretation of Signals and System Manipulation Pathways*
 
 ## 18. Role of Instrumentation in a Biologically Mediated Appliance
