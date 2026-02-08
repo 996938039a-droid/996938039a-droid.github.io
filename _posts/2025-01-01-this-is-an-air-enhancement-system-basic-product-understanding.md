@@ -13,6 +13,9 @@ keywords:
 banner: /assets/images/air_enhancement_system.png
 tldr: >
   This work presents a containment-first indoor air system that transforms pollutants through controlled biological processes rather than passive filtration. It details the underlying biological rationale, the translation of those constraints into a manufacturable consumer product, and the conservative, zone-wise instrumentation and control logic required to maintain long-term stability, safety, and predictable behavior.
+password_protected: true
+password_hint: "Internal draft"
+
 ---
 
 # Part I : Conceptual Foundations, System Philosophy, and Biological Rationale
