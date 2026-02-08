@@ -12,6 +12,8 @@ keywords:
 banner: /assets/images/air_enhancement_system.png
 tldr: >
   This report presents a containment-first indoor air quality enhancement system that integrates physical filtration, enzymatic VOC mineralization, and photosynthetic CO₂ conversion within a consumer appliance. The design prioritizes biological stability, graceful failure, and regulatory safety over aggressive optimization.
+password_protected: true
+password_hint: "Internal draft"
 ---
 
 # FINAL PRODUCT REPORT - A Biologically Mediated Indoor Air Quality Enhancement System  
