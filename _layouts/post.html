@@ -53,7 +53,13 @@
   {% endif %}
 
   <section class="article-body">
+    {% if page.password_protected %}
+    <div id="protectedContent" style="display:none">
+      {{ content }}
+    </div>
+  {% else %}
     {{ content }}
+  {% endif %}
   </section>
 
   <!-- FAQ TARGET -->
@@ -237,6 +243,53 @@ window.addEventListener('load', () => {
   }
 }
 </script>
+
+
+{% if page.password_protected %}
+<script>
+(function () {
+  const PASSWORD = "internaldoc"; // change per use
+  const content = document.getElementById('protectedContent');
+  if (!content) return;
+
+  document.body.innerHTML = `
+    <div style="
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#0b0d10;
+      color:#fff;
+      text-align:center;
+      padding:24px;
+    ">
+      <div>
+        <h1>Protected Page</h1>
+        <p>{{ page.password_hint }}</p>
+        <input
+          type="password"
+          id="pw"
+          placeholder="Enter password"
+          style="padding:12px;font-size:16px;"
+        />
+        <br><br>
+        <button onclick="unlock()">Unlock</button>
+      </div>
+    </div>
+  `;
+
+  window.unlock = function () {
+    if (document.getElementById('pw').value === PASSWORD) {
+      document.body.innerHTML = '';
+      document.body.appendChild(content);
+      content.style.display = 'block';
+    } else {
+      alert('Incorrect password');
+    }
+  };
+})();
+</script>
+{% endif %}
 
 </body>
 </html>
