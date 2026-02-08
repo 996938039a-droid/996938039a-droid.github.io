@@ -160,7 +160,7 @@ Oxygen is passively returned.
 All transformations occur behind sealed interfaces, and all biological systems fail safely.
 
 
-# Instrumentation and Control Architecture - An Embedded Sensing Extension of the Core Product Design
+## Instrumentation and Control Architecture - An Embedded Sensing Extension of the Core Product Design
 
 ## 10. Purpose of Instrumentation Within the Product Architecture
 
