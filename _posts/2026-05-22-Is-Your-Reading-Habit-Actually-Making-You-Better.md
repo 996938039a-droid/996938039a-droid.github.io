@@ -16,7 +16,7 @@ keywords:
   - "reading habits"
   - "books and wisdom"
   - "information overload"
-banner: /assets/images/reading-shaping-or-limiting.png
+banner: /assets/images/file_0000000073dc7207817f5e54c19bed2d.png
 tldr: >
   Reading is one of the most powerful tools for human development — and one of
   the most sophisticated forms of avoidance available. The question is not how
